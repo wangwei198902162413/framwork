@@ -173,3 +173,10 @@ Cond::timedWaitImpl(const M& mutex, const Time& timeout) const
 }
 }// end namespace 
 #endif
+
+
+/*
+Cond  _tryLockCond 
+_tryLockCond.wait(lock); //µÈ´ý
+_tryLockCond.signal();   //·ÅÐÐ
+*/

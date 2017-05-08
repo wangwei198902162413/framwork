@@ -123,6 +123,7 @@ ByteBuffer & ByteBuffer::operator=(const ByteBuffer& rhs)
  */
 ByteBuffer & ByteBuffer::copy(const char* data, uint32_t offset, uint32_t size)
 {
+    /*清空占据的内存*/
     reset();
 
     size_ = size;

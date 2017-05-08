@@ -132,13 +132,16 @@ namespace tbsys {
         
         // 如果文件大于了重新打开一个
         if (m_head.write_filesize >= m_maxFileSize) {
+            //写文件序号++    
             m_head.write_seqno ++;
             m_head.write_filesize = 0;
             openWriteFile();
             writeHead();
         }
+        //每一条数据保存了自己的文件序号和在文件中的偏移
         item->pos.seqno = m_head.write_seqno;
         item->pos.offset = m_head.write_filesize;
+        //write into file
         int ret = write(m_writeFd, buffer, size);
         if (ret > 0) {
             m_head.write_filesize += size;

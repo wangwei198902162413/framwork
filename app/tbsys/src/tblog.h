@@ -53,7 +53,7 @@ using std::deque;
 using std::string;
 
 /**
-* @brief ¼òµ¥µÄÈÕÖ¾ÏµÍ³
+* @brief Â¼Ã²ÂµÂ¥ÂµÃ„ÃˆÃ•Ã–Â¾ÃÂµÃÂ³
 */
 class           CLogger {
 public:
@@ -69,12 +69,12 @@ public:
      */
     void rotateLog(const char *filename, const char *fmt = NULL);
     /**
-     * @brief ½«ÈÕÖ¾ÄÚÈÝÐ´ÈëÎÄ¼þ
+     * @brief Â½Â«ÃˆÃ•Ã–Â¾Ã„ÃšÃˆÃÃÂ´ÃˆÃ«ÃŽÃ„Â¼Ã¾
      *
-     * @param level ÈÕÖ¾µÄ¼¶±ð
-     * @param file  ÈÕÖ¾ÄÚÈÝËùÔÚµÄÎÄ¼þ
-     * @param line  ÈÕÖ¾ÄÚÈÝËùÔÚµÄÎÄ¼þµÄÐÐºÅ
-     * @param function Ð´ÈëÈÕÖ¾ÄÚÈÝµÄº¯ÊýÃû³Æ
+     * @param level ÃˆÃ•Ã–Â¾ÂµÃ„Â¼Â¶Â±Ã°
+     * @param file  ÃˆÃ•Ã–Â¾Ã„ÃšÃˆÃÃ‹Ã¹Ã”ÃšÂµÃ„ÃŽÃ„Â¼Ã¾
+     * @param line  ÃˆÃ•Ã–Â¾Ã„ÃšÃˆÃÃ‹Ã¹Ã”ÃšÂµÃ„ÃŽÃ„Â¼Ã¾ÂµÃ„ÃÃÂºÃ…
+     * @param function ÃÂ´ÃˆÃ«ÃˆÃ•Ã–Â¾Ã„ÃšÃˆÃÂµÃ„ÂºÂ¯ÃŠÃ½ÃƒÃ»Â³Ã†
      * @param fmt
      * @param ...
      */
@@ -98,22 +98,22 @@ public:
      */
     void setFileName(const char *filename, bool flag = false, bool open_wf = false);
     /**
-     * @brief ¼ì²âÎÄ¼þÊÇ·ñÒÑ¾­´ò¿ª,±ê×¼Êä³ö,´íÎóÊä³öÖØ¶¨Ïò
+     * @brief Â¼Ã¬Â²Ã¢ÃŽÃ„Â¼Ã¾ÃŠÃ‡Â·Ã±Ã’Ã‘Â¾Â­Â´Ã²Â¿Âª,Â±ÃªÃ—Â¼ÃŠÃ¤Â³Ã¶,Â´Ã­ÃŽÃ³ÃŠÃ¤Â³Ã¶Ã–Ã˜Â¶Â¨ÃÃ²
      */
     void checkFile();
     void setCheck(int v) {_check = v;}
     /**
-     * @brief ÉèÖÃÈÕÖ¾ÎÄ¼þÎÄ¼þµÄ´óÐ¡,´ïµ½maxFileSize¾ÍÐÂ´ò¿ªÒ»¸öÎÄ¼þ
-     * Èç¹û²»ÉèÖÃ´ËÏî£¬ÈÕÖ¾ÏµÍ³»áºöÂÔÈÕÖ¾¹ö¶¯
+     * @brief Ã‰Ã¨Ã–ÃƒÃˆÃ•Ã–Â¾ÃŽÃ„Â¼Ã¾ÃŽÃ„Â¼Ã¾ÂµÃ„Â´Ã³ÃÂ¡,Â´Ã¯ÂµÂ½maxFileSizeÂ¾ÃÃÃ‚Â´Ã²Â¿ÂªÃ’Â»Â¸Ã¶ÃŽÃ„Â¼Ã¾
+     * ÃˆÃ§Â¹Ã»Â²Â»Ã‰Ã¨Ã–ÃƒÂ´Ã‹ÃÃ®Â£Â¬ÃˆÃ•Ã–Â¾ÃÂµÃÂ³Â»Ã¡ÂºÃ¶Ã‚Ã”ÃˆÃ•Ã–Â¾Â¹Ã¶Â¶Â¯
      *
-     * @param maxFileSize ÈÕÖ¾ÎÄ¼þµÄ´óÐ¡
+     * @param maxFileSize ÃˆÃ•Ã–Â¾ÃŽÃ„Â¼Ã¾ÂµÃ„Â´Ã³ÃÂ¡
      */
     void setMaxFileSize( int64_t maxFileSize=0x40000000);
     /**
-     * @brief ±£Áô×î½ümaxFileIndex¸öÈÕÖ¾ÎÄ¼þ£¬³¬³ömaxFileIndex¸öÈÕÖ¾ÎÄ¼þ
-     * »á°´Ê±¼äÏÈºóÉ¾³ý,µ«½ø³ÌÖØÆôºóÈÕÖ¾ÏµÍ³»á°´Ê±¼äÏÈºóÖØÐÂÍ³¼Æ
+     * @brief Â±Â£ÃÃ´Ã—Ã®Â½Ã¼maxFileIndexÂ¸Ã¶ÃˆÃ•Ã–Â¾ÃŽÃ„Â¼Ã¾Â£Â¬Â³Â¬Â³Ã¶maxFileIndexÂ¸Ã¶ÃˆÃ•Ã–Â¾ÃŽÃ„Â¼Ã¾
+     * Â»Ã¡Â°Â´ÃŠÂ±Â¼Ã¤ÃÃˆÂºÃ³Ã‰Â¾Â³Ã½,ÂµÂ«Â½Ã¸Â³ÃŒÃ–Ã˜Ã†Ã´ÂºÃ³ÃˆÃ•Ã–Â¾ÃÂµÃÂ³Â»Ã¡Â°Â´ÃŠÂ±Â¼Ã¤ÃÃˆÂºÃ³Ã–Ã˜ÃÃ‚ÃÂ³Â¼Ã†
      *
-     * @param maxFileIndex ±£ÁôÎÄ¼þµÄ×î´ó¸öÊý
+     * @param maxFileIndex Â±Â£ÃÃ´ÃŽÃ„Â¼Ã¾ÂµÃ„Ã—Ã®Â´Ã³Â¸Ã¶ÃŠÃ½
      */
     void setMaxFileIndex( int maxFileIndex= 0x0F);
 

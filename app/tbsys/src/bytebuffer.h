@@ -79,9 +79,31 @@ namespace tbutil {
             ByteBuffer & getString(std::string & v) throw (out_of_range);
 
             // get data_ directly..
+            /**
+             * [put 放入二进制数据]
+             * @param  src          [src数据]
+             * @param  offset       [src 要拷贝的 初始字节]
+             * @param  size         [要拷贝数据的大小]
+             * @return              [返回包含数据的buffer]
+             */
             virtual ByteBuffer & put(const char* src, uint32_t offset, uint32_t size)  throw (out_of_range);
+            /**
+             * [get description]
+             * @param  dst          [要放入数据的指针]
+             * @param  offset       [要放入数据的开始地址 = dst + offset ]
+             * @param  size         [要拷贝的数据的字节数]
+             * @return              [ByteBuffer]
+             */
             virtual ByteBuffer & get(char* dst, uint32_t offset, uint32_t size) throw (out_of_range);
             // relative get method, from index of data_
+            /**
+             * [get description]
+             * @param  index        [从index处开始拷贝 而不是默认的position_处]
+             * @param  dst          [要放入数据的指针]
+             * @param  offset       [要放入数据的开始地址 = dst + offset ]
+             * @param  size         [要拷贝的数据的字节数]
+             * @return              [ByteBuffer]
+             */
             ByteBuffer & get(int index, char* dst, uint32_t offset, uint32_t size) throw (out_of_range);
             // fetch data_ directly, use them very carefully 
             ByteBuffer & getRef(int index, const char* &dst, uint32_t size) throw (out_of_range);
@@ -91,21 +113,39 @@ namespace tbutil {
             template <typename T> ByteBuffer & getRef(int index, const T* &dst) throw (out_of_range);
 
         public:
+            /*清空所占据的内存*/
             void      reset();
+            /*清空所占据的内存，重新分配size字节数据*/
             void      reset(uint32_t size);
+
             uint32_t  position(uint32_t p) throw (ByteBuffer::out_of_range);
+            /*position_ 表示已经使用了的数据在数组中所占的位置*/
             uint32_t  position() const { return position_; }
+            /*取分配的数据的字节大小*/
             uint32_t  size() const { return size_; }
+            /*余下的还未使用的数据大小*/
             int32_t   remaining() const { return size_ - position_; }
 
         protected:
+            //malloc 申请size 内存
             char* allocate(uint32_t size) const;
+            //free 占用的malloc 内存
             void  free();
+            /**
+             * [copy 将data的数据的offset位保存入ByteBuffer]
+             * @param  data   [要保存的数据]
+             * @param  offset [要保存的数据的偏移及从data取多少位数据]
+             * @param  length [要保存的数据的大小]
+             * @return        [返回保存了data的ByteBuffer]
+             */
             ByteBuffer & copy(const char* data, uint32_t offset, uint32_t length);
 
         protected:
+            /*数据存储地址*/
             char* data_;
+            /*数据的存储的大小*/
             uint32_t size_;
+            /*position_ 表示已经使用了的数据在数组中所占的位置*/
             uint32_t position_;
             bool  own_;
     };

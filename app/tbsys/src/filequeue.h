@@ -55,7 +55,7 @@ namespace tbsys {
     typedef struct qinfo_head {
         uint32_t read_seqno;    // 读文件的seqno
         int read_offset;        // 读文件的offset
-        uint32_t write_seqno;        // 写文件的seqno
+        uint32_t write_seqno;   // 写文件的seqno
         int write_filesize;     // 写文件的大小
         int queue_size;         // 队列长度
         int exit_status;        // 退出状态

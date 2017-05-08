@@ -87,3 +87,9 @@ namespace tbsys {
 }
 
 #endif
+/*
+TBSYS_CONFIG.load(config_file)
+ TBSYS_CONFIG.getString(CONFSERVER_SECTION, TAIR_PID_FILE, "cfgsvr.pid");
+
+
+ */
