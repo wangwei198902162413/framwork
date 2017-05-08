@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest
+END
+FailOverConfigServerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailOverConfigServerTest.java
+END
+FailOverConfigServerTest1.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailOverConfigServerTest1.java
+END
+BaseTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/BaseTestCase.java
+END
+FunctionDataServerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FunctionDataServerTest.java
+END
+FunctionDataServerTest1.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FunctionDataServerTest1.java
+END
+FailOverDataServerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailOverDataServerTest.java
+END
+TestAll.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/TestAll.java
+END
+FailOverDataServerTest1.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailOverDataServerTest1.java
+END
+FailoverClusterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailoverClusterTest.java
+END
+FailoverClusterTest1.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailoverClusterTest1.java
+END
+FailOverBaseCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/src/test/java/com/taobao/tairtest/FailOverBaseCase.java
+END

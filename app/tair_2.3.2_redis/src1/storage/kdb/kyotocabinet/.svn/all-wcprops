@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet
+END
+kcutil.cc
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcutil.cc
+END
+kcmap.cc
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcmap.cc
+END
+myconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/myconf.h
+END
+kcutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcutil.h
+END
+kcfile.cc
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcfile.cc
+END
+kcmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcmap.h
+END
+kcfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcfile.h
+END
+kcplantdb.cc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcplantdb.cc
+END
+kcdb.cc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcdb.cc
+END
+kccompare.cc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kccompare.cc
+END
+kcplantdb.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcplantdb.h
+END
+kcdb.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcdb.h
+END
+kccompare.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kccompare.h
+END
+kchashdb.cc
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kchashdb.cc
+END
+kccommon.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kccommon.h
+END
+kchashdb.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kchashdb.h
+END
+kccompress.cc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kccompress.cc
+END
+kccompress.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kccompress.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/Makefile.am
+END
+kcthread.cc
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcthread.cc
+END
+kcthread.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcthread.h
+END
+kcregex.cc
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcregex.cc
+END
+kcregex.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/kdb/kyotocabinet/kcregex.h
+END

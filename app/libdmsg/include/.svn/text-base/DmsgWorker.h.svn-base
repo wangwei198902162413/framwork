@@ -1,0 +1,73 @@
+#ifndef _DMSG_DMSG_WORKER_H_
+#define _DMSG_DMSG_WORKER_H_
+
+#include <map>
+
+namespace dmsg {
+
+/*typedef enum {
+	STOP,
+	START
+} PARTITION_CONSUMER_STAT;
+
+typedef struct TopicMetaData_ {
+	rd_kafka_topic_t* rkt;
+	int64_t offset;
+	PARTITION_CONSUMER_STAT stat;
+} TopicMetaData;*/
+
+class KafkaHandle;
+class Config;
+typedef void* pDmsgHandle;
+//!	生产者和消费者基类
+/*!
+	实现生产者赫消费者共同的逻辑，提供给外部应用使用
+*/
+class DmsgWorker {
+public:
+	/*!
+		构造函数
+		\param[in] type kafka客户端的类型(生产者或消费者)
+		\param[in] conf 生产者配置
+	*/
+    DmsgWorker(int type, Config* conf=NULL);
+
+	/*!
+		析构函数，释放kafka和topic的结构
+	*/
+    virtual ~DmsgWorker();
+
+	/*!
+		初始化函数
+		\param[in] broker_list 指定kafka服务的主机和端口
+		\param[in] zookeeper_list 指定zookeeper服务的主机和端口
+		\return true - 成功， false - 失败
+	*/
+    bool init(const std::string &broker_list, const std::string &zookeeper_list);
+
+	/*!
+		根据主题(topic)名称获取相应的结构指针
+		\param[in] topic 主题名称
+		\param[in] create 是否自动创建主题结构
+		\return 非0 - kafka主题结构指针， NULL - 失败
+	*/
+    pDmsgHandle getTopicHandle(const std::string &topic, bool create = true);
+
+	/*!
+		根据主题(topic)名称获取分区(partition)的数量
+		\param[in] topic 主题名称
+		\return >0 - 分区数量， 0 - 失败
+	*/
+	int getPartitionCount(const std::string &topic);
+
+protected:
+    typedef std::map<std::string, pDmsgHandle> TopicList;
+    TopicList topicList_;	//!< 主题名称和结构对应关系
+    KafkaHandle *kafka_;	//!< kafka句柄对象指针
+};
+
+}
+
+#endif
+
+

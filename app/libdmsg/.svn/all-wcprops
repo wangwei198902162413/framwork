@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/jt_src/!svn/ver/25162/BM4.0/bm_submit/src/the3/libdmsg
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/jt_src/!svn/ver/24670/BM4.0/bm_submit/src/the3/libdmsg/build.sh
+END
+librdkafka.patch
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka.patch
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/README
+END

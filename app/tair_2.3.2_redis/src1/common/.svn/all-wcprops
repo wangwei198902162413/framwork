@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/common
+END
+mmap_file.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/mmap_file.hpp
+END
+define.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/common/define.hpp
+END
+data_entry.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tair/!svn/ver/937/branches/tair_2.3.2_redis/src/common/data_entry.hpp
+END
+wait_object.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/common/wait_object.hpp
+END
+local_queue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/common/local_queue.hpp
+END
+disk_queue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/common/disk_queue.hpp
+END
+data_dumpper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/data_dumpper.cpp
+END
+item_data_info.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/item_data_info.hpp
+END
+stat_helper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/stat_helper.cpp
+END
+data_dumpper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/data_dumpper.hpp
+END
+util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/util.cpp
+END
+dump_data_info.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/dump_data_info.hpp
+END
+queue_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/common/queue_config.h
+END
+binlog.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tair/!svn/ver/1071/branches/tair_2.3.2_redis/src/common/binlog.hpp
+END
+stat_helper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/stat_helper.hpp
+END
+util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tair/!svn/ver/732/branches/tair_2.3.2_redis/src/common/util.hpp
+END
+file_op.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tair/!svn/ver/1071/branches/tair_2.3.2_redis/src/common/file_op.hpp
+END
+log.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/log.hpp
+END
+mem_queue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/common/mem_queue.hpp
+END
+hash.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/hash.hpp
+END
+base_queue_node.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/common/base_queue_node.hpp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/common/Makefile.am
+END
+stat_info.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/common/stat_info.hpp
+END

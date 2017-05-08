@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/tair/!svn/ver/1000/branches/tair_2.3.2_redis/scripts
+END
+mdbshm_reader.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/scripts/mdbshm_reader.py
+END
+tair.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tair/!svn/ver/1000/branches/tair_2.3.2_redis/scripts/tair.sh
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/scripts/Makefile.am
+END
+set_shm.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/scripts/set_shm.sh
+END

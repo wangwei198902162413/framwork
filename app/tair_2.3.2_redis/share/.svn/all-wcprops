@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/share
+END
+configserver.conf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/share/configserver.conf
+END
+group.conf
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/share/group.conf
+END
+dataserver.conf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/share/dataserver.conf
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/share/Makefile.am
+END

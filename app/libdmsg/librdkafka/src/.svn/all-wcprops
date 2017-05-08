@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src
+END
+rdkafka_topic.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_topic.c
+END
+rdthread.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdthread.h
+END
+rdkafka_timer.c
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_timer.c
+END
+rdkafka_topic.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_topic.h
+END
+rdlog.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdlog.c
+END
+rdkafka_broker.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_broker.c
+END
+rdkafka_timer.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_timer.h
+END
+rdsignal.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdsignal.h
+END
+rdkafka_offset.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_offset.c
+END
+rdkafka_msg.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_msg.c
+END
+rdrand.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdrand.c
+END
+rdqueue.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdqueue.c
+END
+rdlog.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdlog.h
+END
+rdevent.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdevent.h
+END
+rdkafka_broker.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_broker.h
+END
+rdkafka_defaultconf.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_defaultconf.c
+END
+rdkafka_msg.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_msg.h
+END
+rdkafka_offset.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_offset.h
+END
+rdqueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdqueue.h
+END
+rdrand.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdrand.h
+END
+snappy_compat.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/snappy_compat.h
+END
+rdkafka_proto.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_proto.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/Makefile
+END
+rdtypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdtypes.h
+END
+rdaddr.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdaddr.c
+END
+rdcrc32.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdcrc32.c
+END
+rdkafka.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka.c
+END
+rdaddr.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdaddr.h
+END
+rd.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rd.c
+END
+rdgz.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdgz.c
+END
+endian_compat.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/endian_compat.h
+END
+rdcrc32.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdcrc32.h
+END
+rdkafka.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka.h
+END
+rd.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rd.h
+END
+snappy.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/snappy.c
+END
+rdgz.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdgz.h
+END
+rdsysqueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdsysqueue.h
+END
+snappy.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/snappy.h
+END
+rdkafka_int.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdkafka_int.h
+END
+rdtime.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdtime.h
+END
+rdthread.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src/rdthread.c
+END

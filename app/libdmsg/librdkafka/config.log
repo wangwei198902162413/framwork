@@ -1,0 +1,119 @@
+# configure exec: ./configure 
+# On Fri May 29 17:17:40 CST 2015
+DBG: ccenv: WITH_CC:  --version failed: mklove/modules/configure.base: line 1041: --version: command not found
+DBG: Check ccenv (WITH_CC, action cont (originally cont)) failed: command ' --version' failed:
+mklove/modules/configure.base: line 1041: --version: command not found
+DBG: cxxenv: WITH_CXX:  --version failed: mklove/modules/configure.base: line 1041: --version: command not found
+DBG: Check cxxenv (WITH_CXX, action cont (originally cont)) failed: command ' --version' failed:
+mklove/modules/configure.base: line 1041: --version: command not found
+DBG: Compile check PIC (HAVE_PIC): gcc  -g -O2 -Wall -Werror -fPIC _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: Compile check gnulib (WITH_GNULD): gcc  -g -O2 -fPIC -Wall -Werror -shared -Wl,-soname,mkltest.0 _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: Compile check ldsflagvs (): gcc  -g -O2 -fPIC -Wall -Werror -shared -Wl,--version-script=_mkltmpXXXX.lds _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: Compile check __atomic_32 (HAVE_ATOMICS_32): gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: compile check for __atomic_32 (HAVE_ATOMICS_32) failed: gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o : cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+DBG: Check __atomic_32 (HAVE_ATOMICS_32, action cont (originally cont)) failed: compile check failed:
+CC: CC
+flags: 
+gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o :
+cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+source: 
+#include <inttypes.h>
+int32_t foo (int32_t i) {
+  return __atomic_add_fetch(&i, 1, __ATOMIC_SEQ_CST);
+}
+DBG: Compile check __atomic_32_lib (HAVE_ATOMICS_32): gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: compile check for __atomic_32_lib (HAVE_ATOMICS_32) failed: gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o : cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+DBG: Check __atomic_32_lib (HAVE_ATOMICS_32, action cont (originally cont)) failed: compile check failed:
+CC: CC
+flags: -latomic
+gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o :
+cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+source: 
+#include <inttypes.h>
+int32_t foo (int32_t i) {
+  return __atomic_add_fetch(&i, 1, __ATOMIC_SEQ_CST);
+}
+DBG: Compile check __sync_32 (HAVE_ATOMICS_32): gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: Compile check __atomic_64 (HAVE_ATOMICS_64): gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: compile check for __atomic_64 (HAVE_ATOMICS_64) failed: gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o : cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+DBG: Check __atomic_64 (HAVE_ATOMICS_64, action cont (originally cont)) failed: compile check failed:
+CC: CC
+flags: 
+gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o :
+cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+source: 
+#include <inttypes.h>
+int64_t foo (int64_t i) {
+  return __atomic_add_fetch(&i, 1, __ATOMIC_SEQ_CST);
+}
+DBG: Compile check __atomic_64_lib (HAVE_ATOMICS_64): gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: compile check for __atomic_64_lib (HAVE_ATOMICS_64) failed: gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o : cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+DBG: Check __atomic_64_lib (HAVE_ATOMICS_64, action cont (originally cont)) failed: compile check failed:
+CC: CC
+flags: -latomic
+gcc  -g -O2 -fPIC -Wall -Werror -latomic _mkltmpXXXX.c -o _mkltmpXXXX.c.o :
+cc1: warnings being treated as errors
+_mkltmpXXXX.c: In function 'foo':
+_mkltmpXXXX.c:4: warning: implicit declaration of function '__atomic_add_fetch'
+_mkltmpXXXX.c:4: error: '__ATOMIC_SEQ_CST' undeclared (first use in this function)
+_mkltmpXXXX.c:4: error: (Each undeclared identifier is reported only once
+_mkltmpXXXX.c:4: error: for each function it appears in.)
+source: 
+#include <inttypes.h>
+int64_t foo (int64_t i) {
+  return __atomic_add_fetch(&i, 1, __ATOMIC_SEQ_CST);
+}
+DBG: Compile check __sync_64 (HAVE_ATOMICS_64): gcc  -g -O2 -fPIC -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: Compile check socket (): gcc  -g -O2 -fPIC -Wall -Wfloat-equal -Wpointer-arith -Wall -Werror  _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: pkg-config check libpthread (): pkg-config --short-errors --cflags libpthread
+DBG: 'pkg-config --short-errors --cflags libpthread' failed: No package 'libpthread' found
+DBG: Check libpthread (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libpthread' failed:
+No package 'libpthread' found
+DBG: Compile check libpthread (): gcc  -g -O2 -fPIC -Wall -Wfloat-equal -Wpointer-arith -Wall -Werror -lpthread _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: pkg-config check zlib (): pkg-config --short-errors --cflags zlib
+DBG: 'pkg-config --short-errors --cflags zlib' failed: No package 'zlib' found
+DBG: Check zlib (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags zlib' failed:
+No package 'zlib' found
+DBG: Compile check zlib (): gcc  -g -O2 -fPIC -Wall -Wfloat-equal -Wpointer-arith -Wall -Werror -lz _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: pkg-config check librt (): pkg-config --short-errors --cflags librt
+DBG: 'pkg-config --short-errors --cflags librt' failed: No package 'librt' found
+DBG: Check librt (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags librt' failed:
+No package 'librt' found
+DBG: Compile check librt (): gcc  -g -O2 -fPIC -Wall -Wfloat-equal -Wpointer-arith -Wall -Werror -lrt _mkltmpXXXX.c -o _mkltmpXXXX.c.o 
+DBG: otool: : otool is not executable: 
+DBG: Check otool (, action cont (originally cont)) failed: otool is not executable

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/jt_src/!svn/ver/25098/BM4.0/bm_submit/src/the3/libdmsg/include
+END
+KafkaHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/jt_src/!svn/ver/24645/BM4.0/bm_submit/src/the3/libdmsg/include/KafkaHandle.h
+END
+Consumer.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/24892/BM4.0/bm_submit/src/the3/libdmsg/include/Consumer.h
+END
+Partitioner.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/jt_src/!svn/ver/24644/BM4.0/bm_submit/src/the3/libdmsg/include/Partitioner.h
+END
+Producer.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/25098/BM4.0/bm_submit/src/the3/libdmsg/include/Producer.h
+END
+ConsumerActor.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24644/BM4.0/bm_submit/src/the3/libdmsg/include/ConsumerActor.h
+END
+DmsgWorker.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/jt_src/!svn/ver/24679/BM4.0/bm_submit/src/the3/libdmsg/include/DmsgWorker.h
+END
+Config.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jt_src/!svn/ver/24644/BM4.0/bm_submit/src/the3/libdmsg/include/Config.h
+END

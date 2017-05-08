@@ -1,0 +1,21 @@
+介绍
+----
+
+	libkafkacpp是kafka的C++接口库。在librdkafka（C库）的基础上做了二次封装。
+
+编译及使用
+----------
+
+	1. 进入librdkafka子目录
+	1.1 运行./configure --prefix=../dep
+	1.2 运行make命令
+	1.3 运行make install命令
+	2. 在src目录下运行make命令
+	3. 编译及链接应用程序时指定include目录和src目录下的libkafkacpp.a，也可拷贝到统一的目录下
+	4. 测试代码在test目录下,进入该目录
+	4.1 修改Define.h中BROKER_LIST宏，指定测试用的kafka集群地址
+	4.2 运行make命令
+	4.3 执行./unit_test跑单元测试
+	
+
+

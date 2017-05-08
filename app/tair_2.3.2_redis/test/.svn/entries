@@ -1,0 +1,77 @@
+10
+
+dir
+3085
+http://code.taobao.org/svn/tair/branches/tair_2.3.2_redis/test
+http://code.taobao.org/svn/tair
+
+
+
+2012-08-30T06:51:05.715238Z
+1087
+choutian.xmm@taobao.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ed5bfd34-b61d-4ad5-b956-f82ce90ca771
+
+interface_test
+dir
+
+failover_test
+dir
+
+rdb_interface_test
+dir
+
+binlog_test
+dir
+
+Makefile.am
+file
+
+
+
+
+2017-04-12T01:50:34.171875Z
+c4af1a9bdf56af97ff71b0b58edad58e
+2012-08-28T03:40:45.528866Z
+1070
+choutian.xmm@taobao.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1003
+
+localqueue_test
+dir
+

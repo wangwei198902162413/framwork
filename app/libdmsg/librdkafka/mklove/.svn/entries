@@ -1,0 +1,43 @@
+8
+
+dir
+25570
+http://10.20.16.39:8001/jt_src/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/mklove
+http://10.20.16.39:8001/jt_src
+
+
+
+2014-10-10T07:19:12.625000Z
+17499
+cuisheng
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c3f4d47c-5224-2442-8c0e-a9d1e43b414d
+
+Makefile.base
+file
+
+
+
+
+2015-05-26T09:14:54.000000Z
+05779ad5f3d5c2d11a900ef97a1aa0ca
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+modules
+dir
+

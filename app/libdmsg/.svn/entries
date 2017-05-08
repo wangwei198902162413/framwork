@@ -1,0 +1,79 @@
+8
+
+dir
+25570
+http://10.20.16.39:8001/jt_src/BM4.0/bm_submit/src/the3/libdmsg
+http://10.20.16.39:8001/jt_src
+
+
+
+2015-05-14T09:19:09.546875Z
+25162
+jiangt
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c3f4d47c-5224-2442-8c0e-a9d1e43b414d
+
+test
+dir
+
+sample
+dir
+
+include
+dir
+
+src
+dir
+
+build.sh
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+8e9944cda8c2e5eae942d7a1ec45961e
+2015-04-24T05:34:36.937500Z
+24670
+huangli
+
+librdkafka.patch
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+6b996ccde2e75c85ae13ec280566868a
+2015-02-09T09:01:49.265625Z
+22232
+zhangzhentao
+
+librdkafka
+dir
+
+README
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+ac06662e4e6d27da4dd110c5e9febf6d
+2014-08-07T09:51:44.828125Z
+15244
+zhangzhentao
+

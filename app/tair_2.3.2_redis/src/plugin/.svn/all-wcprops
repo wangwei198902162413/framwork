@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/plugin
+END
+sample_plugin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/sample_plugin.cpp
+END
+remote_sync_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/remote_sync_manager.cpp
+END
+sample_plugin.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/sample_plugin.hpp
+END
+remote_sync_manager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/remote_sync_manager.hpp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/plugin/Makefile.am
+END
+plugin_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/plugin_manager.cpp
+END
+hash_packet_pair.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/hash_packet_pair.hpp
+END
+base_plugin.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/base_plugin.hpp
+END
+plugin_manager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/plugin/plugin_manager.hpp
+END

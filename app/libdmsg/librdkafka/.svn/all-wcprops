@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/jt_src/!svn/ver/25162/BM4.0/bm_submit/src/the3/libdmsg/librdkafka
+END
+INTRODUCTION.md
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/INTRODUCTION.md
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/configure
+END
+LICENSE.pycrc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/LICENSE.pycrc
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/LICENSE
+END
+lds-gen.pl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/lds-gen.pl
+END
+CONFIGURATION.md
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/CONFIGURATION.md
+END
+configure.librdkafka
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/configure.librdkafka
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/config.h
+END
+LICENSE.snappy
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/LICENSE.snappy
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/README.md
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/Makefile
+END

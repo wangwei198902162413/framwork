@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/jt_src/!svn/ver/24901/BM4.0/bm_submit/src/the3/libdmsg/src
+END
+Producer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jt_src/!svn/ver/24892/BM4.0/bm_submit/src/the3/libdmsg/src/Producer.cpp
+END
+DmsgWorker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/24679/BM4.0/bm_submit/src/the3/libdmsg/src/DmsgWorker.cpp
+END
+Config.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/jt_src/!svn/ver/24644/BM4.0/bm_submit/src/the3/libdmsg/src/Config.cpp
+END
+KafkaHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/24655/BM4.0/bm_submit/src/the3/libdmsg/src/KafkaHandle.cpp
+END
+Consumer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jt_src/!svn/ver/24892/BM4.0/bm_submit/src/the3/libdmsg/src/Consumer.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/jt_src/!svn/ver/24901/BM4.0/bm_submit/src/the3/libdmsg/src/Makefile
+END

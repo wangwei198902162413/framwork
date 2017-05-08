@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/tair/!svn/ver/703/branches/tair_2.3.2_redis/test/rdb_interface_test
+END
+hset_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hset_general_test.cpp
+END
+hmget_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hmget_general_test.cpp
+END
+set_normal_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/set_normal_test.cpp
+END
+srem_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/srem_general_test.cpp
+END
+sadd_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/sadd_general_test.cpp
+END
+hdel_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hdel_general_test.cpp
+END
+smembers_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/smembers_general_test.cpp
+END
+hgetall_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hgetall_general_test.cpp
+END
+hmset_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tair/!svn/ver/703/branches/tair_2.3.2_redis/test/rdb_interface_test/hmset_general_test.cpp
+END
+test_test_helper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/test_test_helper.cpp
+END
+base_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/base_test.hpp
+END
+test_helper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/test_helper.cpp
+END
+hget_general_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hget_general_test.cpp
+END
+test_helper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/test_helper.hpp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/Makefile.am
+END
+hash_normal_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/tair/!svn/ver/692/branches/tair_2.3.2_redis/test/rdb_interface_test/hash_normal_test.cpp
+END

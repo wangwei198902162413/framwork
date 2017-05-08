@@ -1,0 +1,10 @@
+prefix=/opt/opthb/src/the3/libdmsg/librdkafka/../dep
+libdir=/opt/opthb/src/the3/libdmsg/librdkafka/../dep/lib
+includedir=/opt/opthb/src/the3/libdmsg/librdkafka/../dep/include
+
+Name: The Apache Kafka C/C++ library
+Description: Full Apache Kafka 0.8 protocol support, including producer and consumer
+Version: 0.8.3
+Cflags: -I${includedir}
+Libs: -L${libdir} -lrdkafka
+

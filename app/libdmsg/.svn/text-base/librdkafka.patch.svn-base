@@ -1,0 +1,1160 @@
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/examples/rdkafka_example.c librdkafka/examples/rdkafka_example.c
+--- libkafkacpp/librdkafka/examples/rdkafka_example.c	2015-02-09 22:19:31.645002424 +0800
++++ librdkafka/examples/rdkafka_example.c	2015-02-08 23:26:32.000000000 +0800
+@@ -67,7 +67,7 @@
+ 
+ 
+ 	if (name)
+-		fprintf(fp, "%s hexdump (%zd bytes):\n", name, len);
++		fprintf(fp, "%s hexdump (%d bytes):\n", name, len);
+ 
+ 	for (of = 0 ; of < len ; of += 16) {
+ 		char hexen[16*3+1];
+@@ -113,7 +113,7 @@
+ 		fprintf(stderr, "%% Message delivery failed: %s\n",
+ 			rd_kafka_err2str(error_code));
+ 	else if (!quiet)
+-		fprintf(stderr, "%% Message delivered (%zd bytes)\n", len);
++		fprintf(stderr, "%% Message delivered (%d bytes)\n", len);
+ }
+ 
+ /**
+@@ -126,7 +126,7 @@
+                         rd_kafka_message_errstr(rkmessage));
+ 	else if (!quiet)
+ 		fprintf(stderr,
+-                        "%% Message delivered (%zd bytes, offset %"PRId64")\n",
++                        "%% Message delivered (%d bytes, offset %"PRId64")\n",
+                         rkmessage->len, rkmessage->offset);
+ }
+ 
+@@ -157,7 +157,7 @@
+ 	}
+ 
+ 	if (!quiet)
+-		fprintf(stdout, "%% Message (offset %"PRId64", %zd bytes):\n",
++		fprintf(stdout, "%% Message (offset %"PRId64", %d bytes):\n",
+ 			rkmessage->offset, rkmessage->len);
+ 
+ 	if (rkmessage->key_len) {
+@@ -533,7 +533,7 @@
+ 			}
+ 
+ 			if (!quiet)
+-				fprintf(stderr, "%% Sent %zd bytes to topic "
++				fprintf(stderr, "%% Sent %d bytes to topic "
+ 					"%s partition %i\n",
+ 				len, rd_kafka_topic_name(rkt), partition);
+ 			sendcnt++;
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/examples/rdkafka_example.cpp librdkafka/examples/rdkafka_example.cpp
+--- libkafkacpp/librdkafka/examples/rdkafka_example.cpp	2015-02-09 22:19:31.646002424 +0800
++++ librdkafka/examples/rdkafka_example.cpp	2015-02-08 23:19:54.000000000 +0800
+@@ -39,8 +39,11 @@
+ #include <csignal>
+ #include <cstring>
+ 
++#ifdef __HPUX__
++#include <unistd.h>
++#else
+ #include <getopt.h>
+-
++#endif
+ 
+ /*
+  * Typically include path in a real application would be
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/genMakefile_HP.sh librdkafka/genMakefile_HP.sh
+--- libkafkacpp/librdkafka/genMakefile_HP.sh	1970-01-01 08:00:00.000000000 +0800
++++ librdkafka/genMakefile_HP.sh	2015-02-09 01:42:34.000000000 +0800
+@@ -0,0 +1,12 @@
++#!/bin/sh
++
++rm config.*;
++chmod u+x *.pl
++
++CUR_DIR=`pwd`
++
++
++bash ./configure --cc=gcc --cxx=g++  --CFLAGS="-I${CUR_DIR}/src/" --CFLAGS="-D__HPUX__" --CXXFLAGS="-D__HPUX__"  --LDFLAGS=-L/usr/lib/hpux32/ --prefix=/yxjfbill/TIBS_HOME/hzheng/dist  --disable-optimization
++
++
++rm ${LOGNAME}*
+\ No newline at end of file
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/mklove/modules/configure.base librdkafka/mklove/modules/configure.base
+--- libkafkacpp/librdkafka/mklove/modules/configure.base	2015-02-09 22:19:30.401002429 +0800
++++ librdkafka/mklove/modules/configure.base	2015-02-08 23:27:18.000000000 +0800
+@@ -224,8 +224,8 @@
+     if [[ $val == code:* ]]; then
+         # Code block, copy verbatim without quotes, strip code: prefix
+         val=${val#code:}
+-    elif [[ ! ( "$val" =~ ^[0-9]+([lL]?[lL][dDuU]?)?$ || \
+-        "$val" =~ ^0x[0-9a-fA-F]+([lL]?[lL][dDuU]?)?$ ) ]]; then
++    elif [[ ! ( "$val" =~ "^[0-9]+([lL]?[lL][dDuU]?)?$" || \
++        "$val" =~ "^0x[0-9a-fA-F]+([lL]?[lL][dDuU]?)?$" ) ]]; then
+         # String: quote
+         val="\"$val\""
+     fi
+@@ -871,7 +871,8 @@
+         cflags="$(mkl_mkvar_get CFLAGS)"
+     fi
+ 
+-    local srcfile=$(mktemp _mkltmpXXXX.$ext)
++    local tmpfile=$(mktemp _mkltmpXXXX)
++    local srcfile=$tmpfile.$ext
+     echo "$6" > $srcfile
+     echo "
+ int main () { return 0; }
+@@ -914,7 +915,8 @@
+ function mkl_link_check {
+     mkl_check_begin "$1" "$2" "$3" "$1 (by linking)" && return $?
+ 
+-    local srcfile=$(mktemp _mktmplXXXX.$ext)
++    local tempfile=$(mktemp _mktmplXXXX)
++    local srcfile=$tempfile.$ext
+     echo "int main () { return 0; }" > $srcfile
+ 
+     local cmd="${CC} $(mkl_mkvar_get LDFLAGS) -c $srcfile -o ${srcfile}.o $4";
+@@ -1170,7 +1172,8 @@
+     # Download
+     mkl_info "${MKL_BLUE}downloading missing module $modname from $url${MKL_CLR_RESET}"
+ 
+-    tmpfile=$(mktemp _mkltmpXXXX.download)
++    local tempfile=$(mktemp _mkltmpXXXX)
++    tmpfile=$tempfile.download
+     local out=
+     out=$(wget -nv -O "$tmpfile" "$url" 2>&1)
+ 
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/mklove/modules/configure.lib librdkafka/mklove/modules/configure.lib
+--- libkafkacpp/librdkafka/mklove/modules/configure.lib	2015-02-09 22:19:30.400002425 +0800
++++ librdkafka/mklove/modules/configure.lib	2015-02-08 23:27:56.000000000 +0800
+@@ -26,7 +26,8 @@
+     fi
+ 
+     # Check what argument is needed for passing linker script.
+-    local ldsfile=$(mktemp _mkltmpXXXX.lds)
++    local tempfile=$(mktemp _mkltmpXXXX)
++    local ldsfile=$tempfile.lds
+     echo "{
+  global:
+   *;
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/bits/byteswap.h librdkafka/src/bits/byteswap.h
+--- libkafkacpp/librdkafka/src/bits/byteswap.h	1970-01-01 08:00:00.000000000 +0800
++++ librdkafka/src/bits/byteswap.h	2015-02-03 11:52:58.000000000 +0800
+@@ -0,0 +1,137 @@
++/* Macros to swap the order of bytes in integer values.
++   Copyright (C) 1997, 1998, 2000, 2002, 2003, 2007, 2008, 2010
++   Free Software Foundation, Inc.
++   This file is part of the GNU C Library.
++
++   The GNU C Library is free software; you can redistribute it and/or
++   modify it under the terms of the GNU Lesser General Public
++   License as published by the Free Software Foundation; either
++   version 2.1 of the License, or (at your option) any later version.
++
++   The GNU C Library is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++   Lesser General Public License for more details.
++
++   You should have received a copy of the GNU Lesser General Public
++   License along with the GNU C Library; if not, write to the Free
++   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++   02111-1307 USA.  */
++
++#if !defined _BYTESWAP_H && !defined _NETINET_IN_H && !defined _ENDIAN_H
++# error "Never use <bits/byteswap.h> directly; include <byteswap.h> instead."
++#endif
++
++#ifndef _BITS_BYTESWAP_H
++#define _BITS_BYTESWAP_H 1
++
++#include <bits/wordsize.h>
++
++/* Swap bytes in 16 bit value.  */
++#define __bswap_constant_16(x) \
++     ((unsigned short int) ((((x) >> 8) & 0xff) | (((x) & 0xff) << 8)))
++
++#if defined __GNUC__ && __GNUC__ >= 2
++# define __bswap_16(x) \
++     (__extension__							      \
++      ({ register unsigned short int __v, __x = (unsigned short int) (x);     \
++	 if (__builtin_constant_p (__x))				      \
++	   __v = __bswap_constant_16 (__x);				      \
++	 else								      \
++	   __asm__ ("rorw $8, %w0"					      \
++		    : "=r" (__v)					      \
++		    : "0" (__x)						      \
++		    : "cc");						      \
++	 __v; }))
++#else
++/* This is better than nothing.  */
++# define __bswap_16(x) \
++     (__extension__							      \
++      ({ register unsigned short int __x = (unsigned short int) (x);          \
++	 __bswap_constant_16 (__x); }))
++#endif
++
++
++/* Swap bytes in 32 bit value.  */
++#define __bswap_constant_32(x) \
++     ((((x) & 0xff000000) >> 24) | (((x) & 0x00ff0000) >>  8) |		      \
++      (((x) & 0x0000ff00) <<  8) | (((x) & 0x000000ff) << 24))
++
++#if defined __GNUC__ && __GNUC__ >= 2
++# if __WORDSIZE == 64 || (defined __i486__ || defined __pentium__	      \
++			  || defined __pentiumpro__ || defined __pentium4__   \
++			  || defined __k8__ || defined __athlon__	      \
++			  || defined __k6__ || defined __nocona__	      \
++			  || defined __core2__ || defined __geode__	      \
++			  || defined __amdfam10__)
++/* To swap the bytes in a word the i486 processors and up provide the
++   `bswap' opcode.  On i386 we have to use three instructions.  */
++#  define __bswap_32(x) \
++     (__extension__							      \
++      ({ register unsigned int __v, __x = (x);				      \
++	 if (__builtin_constant_p (__x))				      \
++	   __v = __bswap_constant_32 (__x);				      \
++	 else								      \
++	   __asm__ ("bswap %0" : "=r" (__v) : "0" (__x));		      \
++	 __v; }))
++# else
++#  define __bswap_32(x)							      \
++     (__extension__							      \
++      ({ register unsigned int __v, __x = (x);				      \
++	 if (__builtin_constant_p (__x))				      \
++	   __v = __bswap_constant_32 (__x);				      \
++	 else								      \
++	   __asm__ ("rorw $8, %w0;"					      \
++		    "rorl $16, %0;"					      \
++		    "rorw $8, %w0"					      \
++		    : "=r" (__v)					      \
++		    : "0" (__x)						      \
++		    : "cc");						      \
++	 __v; }))
++# endif
++#else
++# define __bswap_32(x) \
++     (__extension__							      \
++      ({ register unsigned int __x = (x); __bswap_constant_32 (__x); }))
++#endif
++
++
++#if defined __GNUC__ && __GNUC__ >= 2
++/* Swap bytes in 64 bit value.  */
++# define __bswap_constant_64(x) \
++     ((((x) & 0xff00000000000000ull) >> 56)				      \
++      | (((x) & 0x00ff000000000000ull) >> 40)				      \
++      | (((x) & 0x0000ff0000000000ull) >> 24)				      \
++      | (((x) & 0x000000ff00000000ull) >> 8)				      \
++      | (((x) & 0x00000000ff000000ull) << 8)				      \
++      | (((x) & 0x0000000000ff0000ull) << 24)				      \
++      | (((x) & 0x000000000000ff00ull) << 40)				      \
++      | (((x) & 0x00000000000000ffull) << 56))
++
++# if __WORDSIZE == 64
++#  define __bswap_64(x) \
++     (__extension__							      \
++      ({ register unsigned long __v, __x = (x);				      \
++	 if (__builtin_constant_p (__x))				      \
++	   __v = __bswap_constant_64 (__x);				      \
++	 else								      \
++	   __asm__ ("bswap %q0" : "=r" (__v) : "0" (__x));		      \
++	 __v; }))
++# else
++#  define __bswap_64(x) \
++     (__extension__                                                           \
++      ({ union { __extension__ unsigned long long int __ll;                   \
++		 unsigned int __l[2]; } __w, __r;                             \
++	 if (__builtin_constant_p (x))                                        \
++	   __r.__ll = __bswap_constant_64 (x);                                \
++	 else                                                                 \
++	   {                                                                  \
++	     __w.__ll = (x);                                                  \
++	     __r.__l[0] = __bswap_32 (__w.__l[1]);                            \
++	     __r.__l[1] = __bswap_32 (__w.__l[0]);                            \
++	   }                                                                  \
++	 __r.__ll; }))
++# endif
++#endif
++
++#endif /* _BITS_BYTESWAP_H */
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/bits/wordsize.h librdkafka/src/bits/wordsize.h
+--- libkafkacpp/librdkafka/src/bits/wordsize.h	1970-01-01 08:00:00.000000000 +0800
++++ librdkafka/src/bits/wordsize.h	2015-02-03 11:52:58.000000000 +0800
+@@ -0,0 +1,8 @@
++/* Determine the wordsize from the preprocessor defines.  */
++
++#if defined __x86_64__
++# define __WORDSIZE	64
++# define __WORDSIZE_COMPAT32	1
++#else
++# define __WORDSIZE	32
++#endif
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/byteswap.h librdkafka/src/byteswap.h
+--- libkafkacpp/librdkafka/src/byteswap.h	1970-01-01 08:00:00.000000000 +0800
++++ librdkafka/src/byteswap.h	2015-02-03 11:54:10.000000000 +0800
+@@ -0,0 +1,41 @@
++  /*This file is part of the GNU C Library.
++
++   The GNU C Library is free software; you can redistribute it and/or
++   modify it under the terms of the GNU Lesser General Public
++   License as published by the Free Software Foundation; either
++   version 2.1 of the License, or (at your option) any later version.
++
++   The GNU C Library is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++   Lesser General Public License for more details.
++
++   You should have received a copy of the GNU Lesser General Public
++   License along with the GNU C Library; if not, write to the Free
++   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++   02111-1307 USA.  */
++
++#ifndef _BYTESWAP_H
++#define _BYTESWAP_H     1
++
++/* Get the machine specific, optimized definitions.  */
++#include <bits/byteswap.h>
++
++
++/* The following definitions must all be macros since otherwise some
++   of the possible optimizations are not possible.  */
++
++/* Return a value with all bytes in the 16 bit argument swapped.  */
++#define bswap_16(x) __bswap_16 (x)
++
++/* Return a value with all bytes in the 32 bit argument swapped.  */
++#define bswap_32(x) __bswap_32 (x)
++
++#if defined __GNUC__ && __GNUC__ >= 2
++/* Return a value with all bytes in the 64 bit argument swapped.  */
++# define bswap_64(x) __bswap_64 (x)
++#endif
++
++#endif /* byteswap.h */
++
++
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/endian_compat.h librdkafka/src/endian_compat.h
+--- libkafkacpp/librdkafka/src/endian_compat.h	2015-02-09 22:19:30.115002426 +0800
++++ librdkafka/src/endian_compat.h	2015-02-08 23:20:52.000000000 +0800
+@@ -77,6 +77,8 @@
+     #define be64toh(x) __bswap_64 (x)
+     #define le64toh(x) (x)
+   #endif
++#elif defined __HPUX__
++  #include <sys/byteorder.h>
+ #else
+   #error Unknown location for endian.h
+ #endif
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/rdkafka_broker.c librdkafka/src/rdkafka_broker.c
+--- libkafkacpp/librdkafka/src/rdkafka_broker.c	2015-02-09 22:19:30.109002426 +0800
++++ librdkafka/src/rdkafka_broker.c	2015-02-09 00:28:30.000000000 +0800
+@@ -75,12 +75,12 @@
+ 			  int hexdump) {
+ 	int i;
+ 
+-	rd_kafka_dbg(rk, MSG, "MSG", "%s: iovlen %zd",
++	rd_kafka_dbg(rk, MSG, "MSG", "%s: iovlen %ld",
+ 		     what, (size_t)msg->msg_iovlen);
+ 
+ 	for (i = 0 ; i < msg->msg_iovlen ; i++) {
+ 		rd_kafka_dbg(rk, MSG, what,
+-			     " iov #%i: %zd",
++			     " iov #%i: %ld",
+ 			     i, msg->msg_iov[i].iov_len);
+ 		rd_hexdump(stdout, what, msg->msg_iov[i].iov_base,
+ 			   msg->msg_iov[i].iov_len);
+@@ -502,17 +502,28 @@
+ 	/* See recvmsg() comment. Setting it here to be safe. */
+ 	errno = EAGAIN;
+ #endif
+-	r = sendmsg(rkb->rkb_s, msg, MSG_DONTWAIT
++
++#ifndef __HPUX__
++        r = sendmsg(rkb->rkb_s, msg, MSG_DONTWAIT
+ #ifdef MSG_NOSIGNAL
+-		    |MSG_NOSIGNAL
++                    |MSG_NOSIGNAL
++#endif
++                );
++#else
++    errno = EAGAIN;
++    int old_flags;
++    old_flags = fcntl(rkb->rkb_s, F_GETFL);
++    fcntl(rkb->rkb_s, F_SETFL, old_flags | O_NONBLOCK);
++    r = sendmsg(rkb->rkb_s, msg, 0);
++    if (0 == (old_flags & O_NONBLOCK))
++        fcntl(rkb->rkb_s, F_SETFL, old_flags);
+ #endif
+-		);
+ 	if (r == -1) {
+ 		if (errno == EAGAIN)
+ 			return 0;
+ 
+ 		rd_kafka_dbg(rkb->rkb_rk, BROKER, "BRKSEND",
+-			     "sendmsg FAILED for iovlen %zd (%i)",
++			     "sendmsg FAILED for iovlen %ld (%i)",
+ 			     (size_t)msg->msg_iovlen,
+ 			     IOV_MAX);
+ 		rd_kafka_broker_fail(rkb, RD_KAFKA_RESP_ERR__TRANSPORT,
+@@ -719,7 +730,20 @@
+ 
+ /* Advance/allocate used space in marshall buffer.
+  * Point PTR to available space of size LEN on success. */
+-#define _MSH_ALLOC(PTR,LEN)  do {                                      \
++#ifdef __HPUX__
++#define _MSH_ALLOC(PTR,LEN)  do {                                       \
++                int __LEN = (LEN);                                      \
++                if (msh_of + __LEN >= msh_size)                         \
++                        _FAIL("Not enough room in marshall buffer: "    \
++                              "%i+%i > %i",                             \
++                              msh_of, __LEN, msh_size);                 \
++                (PTR) = (void *)(msh_buf+msh_of);                       \
++                msh_of += __LEN;                                        \
++                while((uint64_t)(msh_buf+msh_of) % 8 != 0)              \
++					++msh_of;                                           \
++        } while(0)
++#else
++#define _MSH_ALLOC(PTR,LEN)  do {                                       \
+                 int __LEN = (LEN);                                      \
+                 if (msh_of + __LEN >= msh_size)                         \
+                         _FAIL("Not enough room in marshall buffer: "    \
+@@ -728,6 +752,7 @@
+                 (PTR) = (void *)(msh_buf+msh_of);                       \
+                 msh_of += __LEN;                                        \
+         } while(0)
++#endif
+ 
+ #define _READ(dstptr,len) do {			\
+ 		_CHECK_LEN(len);		\
+@@ -842,7 +867,8 @@
+         _MSH_ALLOC(md->orig_broker_name, rkb_namelen);
+         memcpy(md->orig_broker_name, rkb->rkb_name, rkb_namelen);
+ 
+-	/* Read Brokers */
++
++/* Read Brokers */
+ 	_READ_I32A(md->broker_cnt);
+ 	if (md->broker_cnt > RD_KAFKAP_BROKERS_MAX)
+ 		_FAIL("Broker_cnt %i > BROKERS_MAX %i",
+@@ -857,6 +883,7 @@
+ 	}
+ 
+ 
++
+ 	/* Read TopicMetadata */
+ 	_READ_I32A(md->topic_cnt);
+ 	rd_rkb_dbg(rkb, METADATA, "METADATA", "%i brokers, %i topics",
+@@ -1314,8 +1341,8 @@
+ 		off_t vof = of - len;
+ 
+ 		if (0)
+-			printf(" #%i/%zd and %zd: of %jd, len %zd, "
+-			       "vof %jd: iov %zd\n",
++			printf(" #%i/%ld and %ld: of %jd, len %ld, "
++			       "vof %jd: iov %ld\n",
+ 			       i,
+ 			       (size_t)src->msg_iovlen,
+ 			       (size_t)dst->msg_iovlen,
+@@ -1417,7 +1444,19 @@
+ 	 * due to no data and MSG_DONTWAIT is set. */
+ 	errno = EAGAIN;
+ #endif
+-	if ((r = recvmsg(rkb->rkb_s, &msg, MSG_DONTWAIT)) == -1) {
++
++#ifndef __HPUX__
++        if ((r = recvmsg(rkb->rkb_s, &msg, MSG_DONTWAIT)) == -1) {
++#else
++    errno = EAGAIN;
++    int old_flags;
++    old_flags = fcntl(rkb->rkb_s, F_GETFL);
++    fcntl(rkb->rkb_s, F_SETFL, old_flags | O_NONBLOCK);
++    r = recvmsg(rkb->rkb_s, &msg,0);
++    if ((old_flags & O_NONBLOCK) == 0)
++        fcntl(rkb->rkb_s, F_SETFL, old_flags);
++    if (-1 == r){
++#endif
+ 		if (errno == EAGAIN)
+ 			return 0;
+ 		snprintf(errstr, sizeof(errstr),
+@@ -1452,7 +1491,7 @@
+ 		if (rkbuf->rkbuf_len < 4/*CorrId*/ ||
+ 		    rkbuf->rkbuf_len > rkb->rkb_rk->rk_conf.recv_max_msg_size) {
+ 			snprintf(errstr, sizeof(errstr),
+-				 "Invalid message size %zd (0..%i): "
++				 "Invalid message size %ld (0..%i): "
+ 				 "increase receive.message.max.bytes",
+ 				 rkbuf->rkbuf_len-4,
+ 				 rkb->rkb_rk->rk_conf.recv_max_msg_size);
+@@ -1675,7 +1714,7 @@
+ 		if (0)
+ 			rd_rkb_dbg(rkb, BROKER, "SEND",
+ 				   "Send buf corrid %"PRId32" at "
+-				   "offset %zd/%zd",
++				   "offset %ld/%ld",
+ 				   rkbuf->rkbuf_corrid,
+ 				   rkbuf->rkbuf_of, rkbuf->rkbuf_len);
+ 
+@@ -2191,7 +2230,7 @@
+ 				if ((r = deflate(&strm, Z_NO_FLUSH) != Z_OK)) {
+ 					rd_rkb_log(rkb, LOG_ERR, "GZIP",
+ 						   "Failed to gzip-compress "
+-						   "%zd bytes for "
++						   "%ld bytes for "
+ 						   "topic %.*s [%"PRId32"]: "
+ 						   "%s (%i): "
+ 						   "sending uncompressed",
+@@ -2603,7 +2642,7 @@
+ 				rd_rkb_dbg(rkb, MSG, "SNAPPY",
+ 					   "Invalid snappy-java chunk length for "
+ 					   "message at offset %"PRId64" "
+-					   "(%"PRIu32">%zd: ignoring message",
++					   "(%"PRIu32">%ld: ignoring message",
+ 					   Offset, clen, inlen - of);
+ 				return NULL;
+ 			}
+@@ -2647,7 +2686,7 @@
+ 
+ 		if (unlikely(of != inlen)) {
+ 			rd_rkb_dbg(rkb, MSG, "SNAPPY",
+-				   "%zd trailing bytes in Snappy-java framed compressed "
++				   "%ld trailing bytes in Snappy-java framed compressed "
+ 				   "data at offset %"PRId64": ignoring message",
+ 				   inlen - of, Offset);
+ 			return NULL;
+@@ -2657,7 +2696,7 @@
+ 			if (uof <= 0) {
+ 				rd_rkb_dbg(rkb, MSG, "SNAPPY",
+ 					   "Empty Snappy-java framed data "
+-					   "at offset %"PRId64" (%zd bytes): "
++					   "at offset %"PRId64" (%ld bytes): "
+ 					   "ignoring message",
+ 					   Offset, uof);
+ 				return NULL;
+@@ -2669,7 +2708,7 @@
+ 				rd_rkb_dbg(rkb, MSG, "SNAPPY",
+ 					   "Failed to allocate memory for uncompressed "
+ 					   "Snappy data at offset %"PRId64
+-					   " (%zd bytes): %s",
++					   " (%ld bytes): %s",
+ 					   Offset, uof, strerror(errno));
+ 				return NULL;
+ 			}
+@@ -3092,7 +3131,7 @@
+ 	}
+ 
+ 	if (_REMAIN() != 0)
+-		_FAIL("Remaining data after message set parse: %zd bytes",
++		_FAIL("Remaining data after message set parse: %ld bytes",
+ 		      _REMAIN());
+ 
+ 	return 0;
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/rdtime.h librdkafka/src/rdtime.h
+--- libkafkacpp/librdkafka/src/rdtime.h	2015-02-09 22:19:30.118002426 +0800
++++ librdkafka/src/rdtime.h	2015-02-09 00:05:40.000000000 +0800
+@@ -63,6 +63,12 @@
+ 	struct timeval tv;
+ 	gettimeofday(&tv, NULL);
+ 	return ((rd_ts_t)tv.tv_sec * 1000000LLU) + (rd_ts_t)tv.tv_usec;
++#elif defined __HPUX__
++
++       /* No monotonic clock on HPUX */
++        struct timeval tv;
++        gettimeofday(&tv, NULL);
++        return ((rd_ts_t)tv.tv_sec * 1000000LLU) + (rd_ts_t)tv.tv_usec;
+ #else
+ 	struct timespec ts;
+ 	clock_gettime(CLOCK_MONOTONIC, &ts);
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/src/sys/queue.h librdkafka/src/sys/queue.h
+--- libkafkacpp/librdkafka/src/sys/queue.h	1970-01-01 08:00:00.000000000 +0800
++++ librdkafka/src/sys/queue.h	2015-02-03 11:53:06.000000000 +0800
+@@ -0,0 +1,574 @@
++/*
++ * Copyright (c) 1991, 1993
++ *	The Regents of the University of California.  All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. Neither the name of the University nor the names of its contributors
++ *    may be used to endorse or promote products derived from this software
++ *    without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
++ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
++ * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
++ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
++ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
++ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
++ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
++ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
++ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
++ * SUCH DAMAGE.
++ *
++ *	@(#)queue.h	8.5 (Berkeley) 8/20/94
++ */
++
++#ifndef	_SYS_QUEUE_H_
++#define	_SYS_QUEUE_H_
++
++/*
++ * This file defines five types of data structures: singly-linked lists,
++ * lists, simple queues, tail queues, and circular queues.
++ *
++ * A singly-linked list is headed by a single forward pointer. The
++ * elements are singly linked for minimum space and pointer manipulation
++ * overhead at the expense of O(n) removal for arbitrary elements. New
++ * elements can be added to the list after an existing element or at the
++ * head of the list.  Elements being removed from the head of the list
++ * should use the explicit macro for this purpose for optimum
++ * efficiency. A singly-linked list may only be traversed in the forward
++ * direction.  Singly-linked lists are ideal for applications with large
++ * datasets and few or no removals or for implementing a LIFO queue.
++ *
++ * A list is headed by a single forward pointer (or an array of forward
++ * pointers for a hash table header). The elements are doubly linked
++ * so that an arbitrary element can be removed without a need to
++ * traverse the list. New elements can be added to the list before
++ * or after an existing element or at the head of the list. A list
++ * may only be traversed in the forward direction.
++ *
++ * A simple queue is headed by a pair of pointers, one the head of the
++ * list and the other to the tail of the list. The elements are singly
++ * linked to save space, so elements can only be removed from the
++ * head of the list. New elements can be added to the list after
++ * an existing element, at the head of the list, or at the end of the
++ * list. A simple queue may only be traversed in the forward direction.
++ *
++ * A tail queue is headed by a pair of pointers, one to the head of the
++ * list and the other to the tail of the list. The elements are doubly
++ * linked so that an arbitrary element can be removed without a need to
++ * traverse the list. New elements can be added to the list before or
++ * after an existing element, at the head of the list, or at the end of
++ * the list. A tail queue may be traversed in either direction.
++ *
++ * A circle queue is headed by a pair of pointers, one to the head of the
++ * list and the other to the tail of the list. The elements are doubly
++ * linked so that an arbitrary element can be removed without a need to
++ * traverse the list. New elements can be added to the list before or after
++ * an existing element, at the head of the list, or at the end of the list.
++ * A circle queue may be traversed in either direction, but has a more
++ * complex end of list detection.
++ *
++ * For details on the use of these macros, see the queue(3) manual page.
++ */
++
++/*
++ * List definitions.
++ */
++#define	LIST_HEAD(name, type)						\
++struct name {								\
++	struct type *lh_first;	/* first element */			\
++}
++
++#define	LIST_HEAD_INITIALIZER(head)					\
++	{ NULL }
++
++#define	LIST_ENTRY(type)						\
++struct {								\
++	struct type *le_next;	/* next element */			\
++	struct type **le_prev;	/* address of previous next element */	\
++}
++
++/*
++ * List functions.
++ */
++#define	LIST_INIT(head) do {						\
++	(head)->lh_first = NULL;					\
++} while (/*CONSTCOND*/0)
++
++#define	LIST_INSERT_AFTER(listelm, elm, field) do {			\
++	if (((elm)->field.le_next = (listelm)->field.le_next) != NULL)	\
++		(listelm)->field.le_next->field.le_prev =		\
++		    &(elm)->field.le_next;				\
++	(listelm)->field.le_next = (elm);				\
++	(elm)->field.le_prev = &(listelm)->field.le_next;		\
++} while (/*CONSTCOND*/0)
++
++#define	LIST_INSERT_BEFORE(listelm, elm, field) do {			\
++	(elm)->field.le_prev = (listelm)->field.le_prev;		\
++	(elm)->field.le_next = (listelm);				\
++	*(listelm)->field.le_prev = (elm);				\
++	(listelm)->field.le_prev = &(elm)->field.le_next;		\
++} while (/*CONSTCOND*/0)
++
++#define	LIST_INSERT_HEAD(head, elm, field) do {				\
++	if (((elm)->field.le_next = (head)->lh_first) != NULL)		\
++		(head)->lh_first->field.le_prev = &(elm)->field.le_next;\
++	(head)->lh_first = (elm);					\
++	(elm)->field.le_prev = &(head)->lh_first;			\
++} while (/*CONSTCOND*/0)
++
++#define	LIST_REMOVE(elm, field) do {					\
++	if ((elm)->field.le_next != NULL)				\
++		(elm)->field.le_next->field.le_prev = 			\
++		    (elm)->field.le_prev;				\
++	*(elm)->field.le_prev = (elm)->field.le_next;			\
++} while (/*CONSTCOND*/0)
++
++#define	LIST_FOREACH(var, head, field)					\
++	for ((var) = ((head)->lh_first);				\
++		(var);							\
++		(var) = ((var)->field.le_next))
++
++/*
++ * List access methods.
++ */
++#define	LIST_EMPTY(head)		((head)->lh_first == NULL)
++#define	LIST_FIRST(head)		((head)->lh_first)
++#define	LIST_NEXT(elm, field)		((elm)->field.le_next)
++
++
++/*
++ * Singly-linked List definitions.
++ */
++#define	SLIST_HEAD(name, type)						\
++struct name {								\
++	struct type *slh_first;	/* first element */			\
++}
++
++#define	SLIST_HEAD_INITIALIZER(head)					\
++	{ NULL }
++
++#define	SLIST_ENTRY(type)						\
++struct {								\
++	struct type *sle_next;	/* next element */			\
++}
++
++/*
++ * Singly-linked List functions.
++ */
++#define	SLIST_INIT(head) do {						\
++	(head)->slh_first = NULL;					\
++} while (/*CONSTCOND*/0)
++
++#define	SLIST_INSERT_AFTER(slistelm, elm, field) do {			\
++	(elm)->field.sle_next = (slistelm)->field.sle_next;		\
++	(slistelm)->field.sle_next = (elm);				\
++} while (/*CONSTCOND*/0)
++
++#define	SLIST_INSERT_HEAD(head, elm, field) do {			\
++	(elm)->field.sle_next = (head)->slh_first;			\
++	(head)->slh_first = (elm);					\
++} while (/*CONSTCOND*/0)
++
++#define	SLIST_REMOVE_HEAD(head, field) do {				\
++	(head)->slh_first = (head)->slh_first->field.sle_next;		\
++} while (/*CONSTCOND*/0)
++
++#define	SLIST_REMOVE(head, elm, type, field) do {			\
++	if ((head)->slh_first == (elm)) {				\
++		SLIST_REMOVE_HEAD((head), field);			\
++	}								\
++	else {								\
++		struct type *curelm = (head)->slh_first;		\
++		while(curelm->field.sle_next != (elm))			\
++			curelm = curelm->field.sle_next;		\
++		curelm->field.sle_next =				\
++		    curelm->field.sle_next->field.sle_next;		\
++	}								\
++} while (/*CONSTCOND*/0)
++
++#define	SLIST_FOREACH(var, head, field)					\
++	for((var) = (head)->slh_first; (var); (var) = (var)->field.sle_next)
++
++/*
++ * Singly-linked List access methods.
++ */
++#define	SLIST_EMPTY(head)	((head)->slh_first == NULL)
++#define	SLIST_FIRST(head)	((head)->slh_first)
++#define	SLIST_NEXT(elm, field)	((elm)->field.sle_next)
++
++
++/*
++ * Singly-linked Tail queue declarations.
++ */
++#define	STAILQ_HEAD(name, type)					\
++struct name {								\
++	struct type *stqh_first;	/* first element */			\
++	struct type **stqh_last;	/* addr of last next element */		\
++}
++
++#define	STAILQ_HEAD_INITIALIZER(head)					\
++	{ NULL, &(head).stqh_first }
++
++#define	STAILQ_ENTRY(type)						\
++struct {								\
++	struct type *stqe_next;	/* next element */			\
++}
++
++/*
++ * Singly-linked Tail queue functions.
++ */
++#define	STAILQ_INIT(head) do {						\
++	(head)->stqh_first = NULL;					\
++	(head)->stqh_last = &(head)->stqh_first;				\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_INSERT_HEAD(head, elm, field) do {			\
++	if (((elm)->field.stqe_next = (head)->stqh_first) == NULL)	\
++		(head)->stqh_last = &(elm)->field.stqe_next;		\
++	(head)->stqh_first = (elm);					\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_INSERT_TAIL(head, elm, field) do {			\
++	(elm)->field.stqe_next = NULL;					\
++	*(head)->stqh_last = (elm);					\
++	(head)->stqh_last = &(elm)->field.stqe_next;			\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_INSERT_AFTER(head, listelm, elm, field) do {		\
++	if (((elm)->field.stqe_next = (listelm)->field.stqe_next) == NULL)\
++		(head)->stqh_last = &(elm)->field.stqe_next;		\
++	(listelm)->field.stqe_next = (elm);				\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_REMOVE_HEAD(head, field) do {				\
++	if (((head)->stqh_first = (head)->stqh_first->field.stqe_next) == NULL) \
++		(head)->stqh_last = &(head)->stqh_first;			\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_REMOVE(head, elm, type, field) do {			\
++	if ((head)->stqh_first == (elm)) {				\
++		STAILQ_REMOVE_HEAD((head), field);			\
++	} else {							\
++		struct type *curelm = (head)->stqh_first;		\
++		while (curelm->field.stqe_next != (elm))			\
++			curelm = curelm->field.stqe_next;		\
++		if ((curelm->field.stqe_next =				\
++			curelm->field.stqe_next->field.stqe_next) == NULL) \
++			    (head)->stqh_last = &(curelm)->field.stqe_next; \
++	}								\
++} while (/*CONSTCOND*/0)
++
++#define	STAILQ_FOREACH(var, head, field)				\
++	for ((var) = ((head)->stqh_first);				\
++		(var);							\
++		(var) = ((var)->field.stqe_next))
++
++#define	STAILQ_CONCAT(head1, head2) do {				\
++	if (!STAILQ_EMPTY((head2))) {					\
++		*(head1)->stqh_last = (head2)->stqh_first;		\
++		(head1)->stqh_last = (head2)->stqh_last;		\
++		STAILQ_INIT((head2));					\
++	}								\
++} while (/*CONSTCOND*/0)
++
++/*
++ * Singly-linked Tail queue access methods.
++ */
++#define	STAILQ_EMPTY(head)	((head)->stqh_first == NULL)
++#define	STAILQ_FIRST(head)	((head)->stqh_first)
++#define	STAILQ_NEXT(elm, field)	((elm)->field.stqe_next)
++
++
++/*
++ * Simple queue definitions.
++ */
++#define	SIMPLEQ_HEAD(name, type)					\
++struct name {								\
++	struct type *sqh_first;	/* first element */			\
++	struct type **sqh_last;	/* addr of last next element */		\
++}
++
++#define	SIMPLEQ_HEAD_INITIALIZER(head)					\
++	{ NULL, &(head).sqh_first }
++
++#define	SIMPLEQ_ENTRY(type)						\
++struct {								\
++	struct type *sqe_next;	/* next element */			\
++}
++
++/*
++ * Simple queue functions.
++ */
++#define	SIMPLEQ_INIT(head) do {						\
++	(head)->sqh_first = NULL;					\
++	(head)->sqh_last = &(head)->sqh_first;				\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_INSERT_HEAD(head, elm, field) do {			\
++	if (((elm)->field.sqe_next = (head)->sqh_first) == NULL)	\
++		(head)->sqh_last = &(elm)->field.sqe_next;		\
++	(head)->sqh_first = (elm);					\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_INSERT_TAIL(head, elm, field) do {			\
++	(elm)->field.sqe_next = NULL;					\
++	*(head)->sqh_last = (elm);					\
++	(head)->sqh_last = &(elm)->field.sqe_next;			\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_INSERT_AFTER(head, listelm, elm, field) do {		\
++	if (((elm)->field.sqe_next = (listelm)->field.sqe_next) == NULL)\
++		(head)->sqh_last = &(elm)->field.sqe_next;		\
++	(listelm)->field.sqe_next = (elm);				\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_REMOVE_HEAD(head, field) do {				\
++	if (((head)->sqh_first = (head)->sqh_first->field.sqe_next) == NULL) \
++		(head)->sqh_last = &(head)->sqh_first;			\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_REMOVE(head, elm, type, field) do {			\
++	if ((head)->sqh_first == (elm)) {				\
++		SIMPLEQ_REMOVE_HEAD((head), field);			\
++	} else {							\
++		struct type *curelm = (head)->sqh_first;		\
++		while (curelm->field.sqe_next != (elm))			\
++			curelm = curelm->field.sqe_next;		\
++		if ((curelm->field.sqe_next =				\
++			curelm->field.sqe_next->field.sqe_next) == NULL) \
++			    (head)->sqh_last = &(curelm)->field.sqe_next; \
++	}								\
++} while (/*CONSTCOND*/0)
++
++#define	SIMPLEQ_FOREACH(var, head, field)				\
++	for ((var) = ((head)->sqh_first);				\
++		(var);							\
++		(var) = ((var)->field.sqe_next))
++
++/*
++ * Simple queue access methods.
++ */
++#define	SIMPLEQ_EMPTY(head)		((head)->sqh_first == NULL)
++#define	SIMPLEQ_FIRST(head)		((head)->sqh_first)
++#define	SIMPLEQ_NEXT(elm, field)	((elm)->field.sqe_next)
++
++
++/*
++ * Tail queue definitions.
++ */
++#define	_TAILQ_HEAD(name, type, qual)					\
++struct name {								\
++	qual type *tqh_first;		/* first element */		\
++	qual type *qual *tqh_last;	/* addr of last next element */	\
++}
++#define TAILQ_HEAD(name, type)	_TAILQ_HEAD(name, struct type,)
++
++#define	TAILQ_HEAD_INITIALIZER(head)					\
++	{ NULL, &(head).tqh_first }
++
++#define	_TAILQ_ENTRY(type, qual)					\
++struct {								\
++	qual type *tqe_next;		/* next element */		\
++	qual type *qual *tqe_prev;	/* address of previous next element */\
++}
++#define TAILQ_ENTRY(type)	_TAILQ_ENTRY(struct type,)
++
++/*
++ * Tail queue functions.
++ */
++#define	TAILQ_INIT(head) do {						\
++	(head)->tqh_first = NULL;					\
++	(head)->tqh_last = &(head)->tqh_first;				\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_INSERT_HEAD(head, elm, field) do {			\
++	if (((elm)->field.tqe_next = (head)->tqh_first) != NULL)	\
++		(head)->tqh_first->field.tqe_prev =			\
++		    &(elm)->field.tqe_next;				\
++	else								\
++		(head)->tqh_last = &(elm)->field.tqe_next;		\
++	(head)->tqh_first = (elm);					\
++	(elm)->field.tqe_prev = &(head)->tqh_first;			\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_INSERT_TAIL(head, elm, field) do {			\
++	(elm)->field.tqe_next = NULL;					\
++	(elm)->field.tqe_prev = (head)->tqh_last;			\
++	*(head)->tqh_last = (elm);					\
++	(head)->tqh_last = &(elm)->field.tqe_next;			\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_INSERT_AFTER(head, listelm, elm, field) do {		\
++	if (((elm)->field.tqe_next = (listelm)->field.tqe_next) != NULL)\
++		(elm)->field.tqe_next->field.tqe_prev = 		\
++		    &(elm)->field.tqe_next;				\
++	else								\
++		(head)->tqh_last = &(elm)->field.tqe_next;		\
++	(listelm)->field.tqe_next = (elm);				\
++	(elm)->field.tqe_prev = &(listelm)->field.tqe_next;		\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_INSERT_BEFORE(listelm, elm, field) do {			\
++	(elm)->field.tqe_prev = (listelm)->field.tqe_prev;		\
++	(elm)->field.tqe_next = (listelm);				\
++	*(listelm)->field.tqe_prev = (elm);				\
++	(listelm)->field.tqe_prev = &(elm)->field.tqe_next;		\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_REMOVE(head, elm, field) do {				\
++	if (((elm)->field.tqe_next) != NULL)				\
++		(elm)->field.tqe_next->field.tqe_prev = 		\
++		    (elm)->field.tqe_prev;				\
++	else								\
++		(head)->tqh_last = (elm)->field.tqe_prev;		\
++	*(elm)->field.tqe_prev = (elm)->field.tqe_next;			\
++} while (/*CONSTCOND*/0)
++
++#define	TAILQ_FOREACH(var, head, field)					\
++	for ((var) = ((head)->tqh_first);				\
++		(var);							\
++		(var) = ((var)->field.tqe_next))
++
++#define	TAILQ_FOREACH_REVERSE(var, head, headname, field)		\
++	for ((var) = (*(((struct headname *)((head)->tqh_last))->tqh_last));	\
++		(var);							\
++		(var) = (*(((struct headname *)((var)->field.tqe_prev))->tqh_last)))
++
++#define	TAILQ_CONCAT(head1, head2, field) do {				\
++	if (!TAILQ_EMPTY(head2)) {					\
++		*(head1)->tqh_last = (head2)->tqh_first;		\
++		(head2)->tqh_first->field.tqe_prev = (head1)->tqh_last;	\
++		(head1)->tqh_last = (head2)->tqh_last;			\
++		TAILQ_INIT((head2));					\
++	}								\
++} while (/*CONSTCOND*/0)
++
++/*
++ * Tail queue access methods.
++ */
++#define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
++#define	TAILQ_FIRST(head)		((head)->tqh_first)
++#define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
++
++#define	TAILQ_LAST(head, headname) \
++	(*(((struct headname *)((head)->tqh_last))->tqh_last))
++#define	TAILQ_PREV(elm, headname, field) \
++	(*(((struct headname *)((elm)->field.tqe_prev))->tqh_last))
++
++
++/*
++ * Circular queue definitions.
++ */
++#define	CIRCLEQ_HEAD(name, type)					\
++struct name {								\
++	struct type *cqh_first;		/* first element */		\
++	struct type *cqh_last;		/* last element */		\
++}
++
++#define	CIRCLEQ_HEAD_INITIALIZER(head)					\
++	{ (void *)&head, (void *)&head }
++
++#define	CIRCLEQ_ENTRY(type)						\
++struct {								\
++	struct type *cqe_next;		/* next element */		\
++	struct type *cqe_prev;		/* previous element */		\
++}
++
++/*
++ * Circular queue functions.
++ */
++#define	CIRCLEQ_INIT(head) do {						\
++	(head)->cqh_first = (void *)(head);				\
++	(head)->cqh_last = (void *)(head);				\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_INSERT_AFTER(head, listelm, elm, field) do {		\
++	(elm)->field.cqe_next = (listelm)->field.cqe_next;		\
++	(elm)->field.cqe_prev = (listelm);				\
++	if ((listelm)->field.cqe_next == (void *)(head))		\
++		(head)->cqh_last = (elm);				\
++	else								\
++		(listelm)->field.cqe_next->field.cqe_prev = (elm);	\
++	(listelm)->field.cqe_next = (elm);				\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_INSERT_BEFORE(head, listelm, elm, field) do {		\
++	(elm)->field.cqe_next = (listelm);				\
++	(elm)->field.cqe_prev = (listelm)->field.cqe_prev;		\
++	if ((listelm)->field.cqe_prev == (void *)(head))		\
++		(head)->cqh_first = (elm);				\
++	else								\
++		(listelm)->field.cqe_prev->field.cqe_next = (elm);	\
++	(listelm)->field.cqe_prev = (elm);				\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_INSERT_HEAD(head, elm, field) do {			\
++	(elm)->field.cqe_next = (head)->cqh_first;			\
++	(elm)->field.cqe_prev = (void *)(head);				\
++	if ((head)->cqh_last == (void *)(head))				\
++		(head)->cqh_last = (elm);				\
++	else								\
++		(head)->cqh_first->field.cqe_prev = (elm);		\
++	(head)->cqh_first = (elm);					\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_INSERT_TAIL(head, elm, field) do {			\
++	(elm)->field.cqe_next = (void *)(head);				\
++	(elm)->field.cqe_prev = (head)->cqh_last;			\
++	if ((head)->cqh_first == (void *)(head))			\
++		(head)->cqh_first = (elm);				\
++	else								\
++		(head)->cqh_last->field.cqe_next = (elm);		\
++	(head)->cqh_last = (elm);					\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_REMOVE(head, elm, field) do {				\
++	if ((elm)->field.cqe_next == (void *)(head))			\
++		(head)->cqh_last = (elm)->field.cqe_prev;		\
++	else								\
++		(elm)->field.cqe_next->field.cqe_prev =			\
++		    (elm)->field.cqe_prev;				\
++	if ((elm)->field.cqe_prev == (void *)(head))			\
++		(head)->cqh_first = (elm)->field.cqe_next;		\
++	else								\
++		(elm)->field.cqe_prev->field.cqe_next =			\
++		    (elm)->field.cqe_next;				\
++} while (/*CONSTCOND*/0)
++
++#define	CIRCLEQ_FOREACH(var, head, field)				\
++	for ((var) = ((head)->cqh_first);				\
++		(var) != (const void *)(head);				\
++		(var) = ((var)->field.cqe_next))
++
++#define	CIRCLEQ_FOREACH_REVERSE(var, head, field)			\
++	for ((var) = ((head)->cqh_last);				\
++		(var) != (const void *)(head);				\
++		(var) = ((var)->field.cqe_prev))
++
++/*
++ * Circular queue access methods.
++ */
++#define	CIRCLEQ_EMPTY(head)		((head)->cqh_first == (void *)(head))
++#define	CIRCLEQ_FIRST(head)		((head)->cqh_first)
++#define	CIRCLEQ_LAST(head)		((head)->cqh_last)
++#define	CIRCLEQ_NEXT(elm, field)	((elm)->field.cqe_next)
++#define	CIRCLEQ_PREV(elm, field)	((elm)->field.cqe_prev)
++
++#define CIRCLEQ_LOOP_NEXT(head, elm, field)				\
++	(((elm)->field.cqe_next == (void *)(head))			\
++	    ? ((head)->cqh_first)					\
++	    : (elm->field.cqe_next))
++#define CIRCLEQ_LOOP_PREV(head, elm, field)				\
++	(((elm)->field.cqe_prev == (void *)(head))			\
++	    ? ((head)->cqh_last)					\
++	    : (elm->field.cqe_prev))
++
++#endif	/* sys/queue.h */
+diff -Nur -x'*svn*' libkafkacpp/librdkafka/tests/test.h librdkafka/tests/test.h
+--- libkafkacpp/librdkafka/tests/test.h	2015-02-09 22:19:30.636002425 +0800
++++ librdkafka/tests/test.h	2015-02-09 00:32:06.000000000 +0800
+@@ -62,6 +62,11 @@
+ 	struct timeval tv;
+ 	gettimeofday(&tv, NULL);
+ 	return ((int64_t)tv.tv_sec * 1000000LLU) + (int64_t)tv.tv_usec;
++#elif defined __HPUX__
++       /* No monotonic clock on HPUX */
++	struct timeval tv;
++	gettimeofday(&tv, NULL);
++	return ((int64_t)tv.tv_sec * 1000000LLU) + (int64_t)tv.tv_usec;
+ #else
+ 	struct timespec ts;
+ 	clock_gettime(CLOCK_MONOTONIC, &ts);

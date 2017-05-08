@@ -1,0 +1,40 @@
+8
+
+dir
+25570
+http://10.20.16.39:8001/jt_src/BM4.0/bm_submit/src/the3/libdmsg/test/bin
+http://10.20.16.39:8001/jt_src
+
+
+
+2014-08-07T09:51:44.828125Z
+15244
+zhangzhentao
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c3f4d47c-5224-2442-8c0e-a9d1e43b414d
+
+test.sh
+file
+
+
+
+
+2015-05-26T09:14:52.000000Z
+7a180124273a790e9df1610b2d7ecb95
+2014-08-07T09:51:44.828125Z
+15244
+zhangzhentao
+

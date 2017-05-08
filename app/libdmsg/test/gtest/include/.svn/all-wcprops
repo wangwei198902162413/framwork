@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include
+END
+gtest-printers.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-printers.h
+END
+gtest_prod.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest_prod.h
+END
+gtest-spi.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-spi.h
+END
+gtest-param-test.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-param-test.h
+END
+gtest-param-test.h.pump
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-param-test.h.pump
+END
+gtest_pred_impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest_pred_impl.h
+END
+gtest-death-test.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-death-test.h
+END
+gtest-typed-test.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-typed-test.h
+END
+gtest.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest.h
+END
+gtest-test-part.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-test-part.h
+END
+gtest-message.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/test/gtest/include/gtest-message.h
+END

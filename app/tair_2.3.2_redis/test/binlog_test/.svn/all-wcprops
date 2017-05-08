@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tair/!svn/ver/1087/branches/tair_2.3.2_redis/test/binlog_test
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1086/branches/tair_2.3.2_redis/test/binlog_test/Makefile.am
+END
+binlog_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/1086/branches/tair_2.3.2_redis/test/binlog_test/binlog_test.cpp
+END

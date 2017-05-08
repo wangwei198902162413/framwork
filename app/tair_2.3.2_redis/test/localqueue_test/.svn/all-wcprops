@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/test/localqueue_test
+END
+mem_queue_unittest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tair/!svn/ver/663/branches/tair_2.3.2_redis/test/localqueue_test/mem_queue_unittest.cpp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/test/localqueue_test/Makefile.am
+END
+disk_queue_unittest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/test/localqueue_test/disk_queue_unittest.cpp
+END
+local_queue_unittest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/test/localqueue_test/local_queue_unittest.cpp
+END
+test_queue_node.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/test/localqueue_test/test_queue_node.hpp
+END

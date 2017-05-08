@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/mock
+END
+mockdb_manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/mock/mockdb_manager.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/mock/Makefile.am
+END
+mockdb_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/661/branches/tair_2.3.2_redis/src/storage/mock/mockdb_manager.cpp
+END

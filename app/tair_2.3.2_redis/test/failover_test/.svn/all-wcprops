@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test
+END
+pack.bat
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/pack.bat
+END
+clean.bat
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/clean.bat
+END
+eclipse.bat
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/eclipse.bat
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/226/branches/tair_2.3.2_redis/test/failover_test/pom.xml
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jt_src/!svn/ver/25162/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples
+END
+rdkafka_example.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_example.c
+END
+rdkafka_example.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_example.cpp
+END
+rdkafka_zookeeper_example.c
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_zookeeper_example.c
+END
+rdkafka_performance.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_performance.c
+END
+rdkafka_example_jt.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_example_jt.c
+END
+rdkafka_example_jt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/jt_src/!svn/ver/25162/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/rdkafka_example_jt.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/25162/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/examples/Makefile
+END

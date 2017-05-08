@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tair/!svn/ver/1151/branches/tair_2.3.2_redis/rpm
+END
+tair_rdb.spec
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tair/!svn/ver/1019/branches/tair_2.3.2_redis/rpm/tair_rdb.spec
+END
+scm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tair/!svn/ver/1020/branches/tair_2.3.2_redis/rpm/scm.xml
+END
+tair_rdb-build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tair/!svn/ver/1022/branches/tair_2.3.2_redis/rpm/tair_rdb-build.sh
+END
+tair_rdb-VER.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tair/!svn/ver/1151/branches/tair_2.3.2_redis/rpm/tair_rdb-VER.txt
+END

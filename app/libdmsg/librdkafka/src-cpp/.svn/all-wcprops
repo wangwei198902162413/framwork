@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp
+END
+TopicImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/TopicImpl.cpp
+END
+RdKafka.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/RdKafka.cpp
+END
+ProducerImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/ProducerImpl.cpp
+END
+rdkafkacpp_int.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/rdkafkacpp_int.h
+END
+MessageImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/MessageImpl.cpp
+END
+ConfImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/ConfImpl.cpp
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/README.md
+END
+rdkafkacpp.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/rdkafkacpp.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/Makefile
+END
+ConsumerImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/ConsumerImpl.cpp
+END
+HandleImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/src-cpp/HandleImpl.cpp
+END

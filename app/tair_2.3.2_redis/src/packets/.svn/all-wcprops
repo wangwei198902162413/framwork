@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tair/!svn/ver/1336/branches/tair_2.3.2_redis/src/packets
+END
+zrevrank_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/zrevrank_packet.hpp
+END
+packet_factory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/packets/packet_factory.cpp
+END
+zcard_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/zcard_packet.hpp
+END
+hmget_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/708/branches/tair_2.3.2_redis/src/packets/hmget_packet.hpp
+END
+zscore_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/zscore_packet.hpp
+END
+hmset_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/hmset_packet.hpp
+END
+items_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/items_packet.hpp
+END
+type_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/type_packet.hpp
+END
+zremrangebyscore_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zremrangebyscore_packet.hpp
+END
+zadd_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zadd_packet.hpp
+END
+hexists_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1001/branches/tair_2.3.2_redis/src/packets/hexists_packet.hpp
+END
+ltrim_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/ltrim_packet.hpp
+END
+migrate_finish_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/migrate_finish_packet.hpp
+END
+info_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/964/branches/tair_2.3.2_redis/src/packets/info_packet.hpp
+END
+getset_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/964/branches/tair_2.3.2_redis/src/packets/getset_packet.hpp
+END
+lrem_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/lrem_packet.hpp
+END
+dump_bucket_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/dump_bucket_packet.hpp
+END
+zrevrange_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/875/branches/tair_2.3.2_redis/src/packets/zrevrange_packet.hpp
+END
+ttl_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/ttl_packet.hpp
+END
+dump_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/dump_packet.hpp
+END
+set_master_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/set_master_packet.hpp
+END
+put_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/put_packet.hpp
+END
+generic_zrangebyscore_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/generic_zrangebyscore_packet.hpp
+END
+smembers_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/smembers_packet.hpp
+END
+zrem_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zrem_packet.hpp
+END
+hvals_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/875/branches/tair_2.3.2_redis/src/packets/hvals_packet.hpp
+END
+exists_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/964/branches/tair_2.3.2_redis/src/packets/exists_packet.hpp
+END
+query_info_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/query_info_packet.hpp
+END
+server_hash_table_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/server_hash_table_packet.hpp
+END
+hgetall_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/hgetall_packet.hpp
+END
+zincrby_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zincrby_packet.hpp
+END
+lindex_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/lindex_packet.hpp
+END
+inc_dec_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/inc_dec_packet.hpp
+END
+hlen_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/hlen_packet.hpp
+END
+simple_return_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/simple_return_packet.hpp
+END
+llen_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/llen_packet.hpp
+END
+remove_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/remove_packet.hpp
+END
+ping_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/ping_packet.hpp
+END
+packet_factory.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/packet_factory.hpp
+END
+load_area_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/packets/load_area_packet.hpp
+END
+hsetnx_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/hsetnx_packet.hpp
+END
+sadd_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/sadd_packet.hpp
+END
+lrpush_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/lrpush_packet.hpp
+END
+spop_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/spop_packet.hpp
+END
+data_server_ctrl_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/data_server_ctrl_packet.hpp
+END
+get_migrate_machine.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/get_migrate_machine.hpp
+END
+lazy_remove_area_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/lazy_remove_area_packet.hpp
+END
+hget_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/708/branches/tair_2.3.2_redis/src/packets/hget_packet.hpp
+END
+expire_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/expire_packet.hpp
+END
+scard_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/scard_packet.hpp
+END
+dump_area_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/packets/dump_area_packet.hpp
+END
+hincrby_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/hincrby_packet.hpp
+END
+mupdate_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/mupdate_packet.hpp
+END
+removefilter_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/packets/removefilter_packet.hpp
+END
+hset_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/hset_packet.hpp
+END
+conf_heartbeat_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/conf_heartbeat_packet.hpp
+END
+srem_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/srem_packet.hpp
+END
+lrange_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1336/branches/tair_2.3.2_redis/src/packets/lrange_packet.hpp
+END
+get_ns_attr_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/get_ns_attr_packet.hpp
+END
+duplicate_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/duplicate_packet.hpp
+END
+base_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/base_packet.hpp
+END
+get_server_table_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/get_server_table_packet.hpp
+END
+hdel_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/708/branches/tair_2.3.2_redis/src/packets/hdel_packet.hpp
+END
+zrangebyscore_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zrangebyscore_packet.hpp
+END
+get_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/get_packet.hpp
+END
+group_names_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/group_names_packet.hpp
+END
+expireat_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/expireat_packet.hpp
+END
+zcount_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/875/branches/tair_2.3.2_redis/src/packets/zcount_packet.hpp
+END
+hkeys_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/979/branches/tair_2.3.2_redis/src/packets/hkeys_packet.hpp
+END
+set_ns_attr_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/set_ns_attr_packet.hpp
+END
+remove_area_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/remove_area_packet.hpp
+END
+zrank_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/zrank_packet.hpp
+END
+zrange_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zrange_packet.hpp
+END
+persist_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/persist_packet.hpp
+END
+get_group_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/get_group_packet.hpp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tair/!svn/ver/1213/branches/tair_2.3.2_redis/src/packets/Makefile.am
+END
+lrpop_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/lrpop_packet.hpp
+END
+response_return_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tair/!svn/ver/921/branches/tair_2.3.2_redis/src/packets/response_return_packet.hpp
+END
+addfilter_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/tair/!svn/ver/1150/branches/tair_2.3.2_redis/src/packets/addfilter_packet.hpp
+END
+heartbeat_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tair/!svn/ver/662/branches/tair_2.3.2_redis/src/packets/heartbeat_packet.hpp
+END
+zremrangebyrank_packet.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/tair/!svn/ver/1070/branches/tair_2.3.2_redis/src/packets/zremrangebyrank_packet.hpp
+END

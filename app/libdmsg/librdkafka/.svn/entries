@@ -1,0 +1,181 @@
+8
+
+dir
+25570
+http://10.20.16.39:8001/jt_src/BM4.0/bm_submit/src/the3/libdmsg/librdkafka
+http://10.20.16.39:8001/jt_src
+
+
+
+2015-05-14T09:19:09.546875Z
+25162
+jiangt
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c3f4d47c-5224-2442-8c0e-a9d1e43b414d
+
+INTRODUCTION.md
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+353bdd15b6c6d90516ceccc0d6a2729e
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+configure
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+73751c7eacef1045092e8acb31fb6916
+2014-08-19T05:50:31.234375Z
+15629
+zhangzhentao
+has-props
+
+LICENSE
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+6baccb9e4e9e0044093be8d78d0a1087
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+src
+dir
+
+LICENSE.snappy
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+bc8da49f3415787be41673b191312995
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+config.h
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+f328d53b9c4b631f3fb85d57b2072b4a
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+README.md
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+a4033536902f91012c516239938cd2d3
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+mklove
+dir
+
+rpm
+dir
+
+LICENSE.pycrc
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+b22d7353eb79f4e6659b7806942806da
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+tests
+dir
+
+lds-gen.pl
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+6f54f0174685d9d9528fbfba15bbcfa1
+2014-08-19T05:50:31.234375Z
+15629
+zhangzhentao
+has-props
+
+CONFIGURATION.md
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+bcc41f93400fff66fdfd4cc13f88f5a5
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+src-cpp
+dir
+
+configure.librdkafka
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+858e9b8b61839afede631ab0ce8453d3
+2014-08-19T05:48:11.218750Z
+15628
+zhangzhentao
+
+Makefile
+file
+
+
+
+
+2015-05-26T09:14:55.000000Z
+567eb389a4d7113683036bba60fd308c
+2014-08-19T05:50:31.234375Z
+15629
+zhangzhentao
+has-props
+
+examples
+dir
+

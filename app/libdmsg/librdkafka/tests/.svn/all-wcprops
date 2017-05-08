@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests
+END
+0001-multiobj.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0001-multiobj.c
+END
+0002-unkpart.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0002-unkpart.c
+END
+0004-conf.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0004-conf.c
+END
+0003-msgmaxsize.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0003-msgmaxsize.c
+END
+0010-enforcereqacks.c
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0010-enforcereqacks.c
+END
+run-test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/run-test.sh
+END
+1000-unktopic.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/1000-unktopic.c
+END
+0006-symbols.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0006-symbols.c
+END
+test.conf.example
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/test.conf.example
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/README
+END
+0008-reqacks.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0008-reqacks.c
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/test.c
+END
+0011-produce_batch.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0011-produce_batch.c
+END
+test.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/test.h
+END
+librdkafka.suppressions
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/librdkafka.suppressions
+END
+0007-autotopic.c
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0007-autotopic.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/Makefile
+END
+0005-order.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/jt_src/!svn/ver/24638/BM4.0/bm_submit/src/the3/libdmsg/librdkafka/tests/0005-order.c
+END

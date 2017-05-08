@@ -1,0 +1,239 @@
+#include "gtest/gtest.h"
+#include "Define.h"
+#include "DmsgWorker.h"
+#include "Producer.h"
+
+
+class TestPartitioner : public dmsg::Partitioner {
+public:
+    virtual int assignPartition() {
+        return 1;
+    }
+};
+
+class ProducerTest: public ::testing::Test {
+public:
+
+    virtual void SetUp() {
+    }
+
+    virtual void TearDown() {
+    }
+
+};
+
+TEST_F(ProducerTest,testInitWithCorrectBroker) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+}
+
+TEST_F(ProducerTest,testInitWithEmptyBroker) {
+    dmsg::Producer p;
+
+    std::string brokerList;
+    std::string zookeeperList;
+    EXPECT_FALSE(p.init(brokerList, zookeeperList));
+}
+
+TEST_F(ProducerTest,testInitWithWrongBroker) {
+    dmsg::Producer p;
+
+    std::string brokerList = "unknown";
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+}
+
+TEST_F(ProducerTest,testProduceNormalMessage) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    std::string message("normal message");
+    std::string topic(PRODUCER_TOPIC);
+    bool ret = p.produceMessage(topic, const_cast<char *>(message.c_str()),
+            message.size());
+    EXPECT_EQ(true, ret);
+}
+
+TEST_F(ProducerTest,testExtendingPartition) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    std::string message("normal message");
+    std::string topic(PRODUCER_TOPIC);
+    while (true) {
+        bool ret = p.produceMessage(topic, const_cast<char *>(message.c_str()),
+                message.size());
+        EXPECT_EQ(true, ret);
+        usleep(100*1000);
+    }
+}
+
+TEST_F(ProducerTest,testProduceWithPartitioner) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    TestPartitioner tp;
+    p.setPartitioner(&tp);
+    std::string message("partitioner message");
+    std::string topic(PRODUCER_TOPIC);
+    int i = 0;
+    while (i < 10) {
+        EXPECT_EQ(true, p.produceMessage(topic, const_cast<char *>(message.c_str()), message.size()));
+        i++;
+    }
+}
+
+
+//Test producing many messages with string topic.
+TEST_F(ProducerTest,testProduceMultipleMessages) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    std::string message("message: ");
+    std::string topic(PERFORMANCE_TOPIC_SMALL);
+    for (int i=0; i<500000; i++) {
+        std::ostringstream oss;
+        oss << message << i;
+        bool ret = p.produceMessage(topic, const_cast<char *>(oss.str().c_str()),
+                oss.str().size());
+        EXPECT_EQ(true, ret);
+    }
+}
+
+//Test producing many messages with rd_kafka_topic_t.
+TEST_F(ProducerTest,testProduceMultipleMessages2) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    std::string message("message: ");
+    std::string topic(PERFORMANCE_TOPIC_SMALL);
+    dmsg::pDmsgHandle rkt = p.getTopicHandle(topic);
+    for (int i=0; i<500000; i++) {
+        std::ostringstream oss;
+        oss << message << i;
+        bool ret = p.produceMessage(rkt, const_cast<char *>(oss.str().c_str()),
+                oss.str().size());
+        EXPECT_EQ(true, ret);
+    }
+}
+
+//Test producing many messages with rd_kafka_topic_t. Message size is 4KB.
+TEST_F(ProducerTest,testProduceMultipleMessages3) {
+    dmsg::Producer p;
+
+    std::string brokerList = BROKER_LIST;
+    std::string zookeeperList;
+    EXPECT_TRUE(p.init(brokerList, zookeeperList));
+
+    std::string message("01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "01234567890123456789012345678901234567890123456789"
+        "0123456789012345678901234567890123456789012345");
+    std::string topic(PERFORMANCE_TOPIC_BIG);
+    dmsg::pDmsgHandle rkt = p.getTopicHandle(topic);
+    for (int i=0; i<500000; i++) {
+        std::ostringstream oss;
+        oss << message << i;
+        bool ret = p.produceMessage(rkt, const_cast<char *>(oss.str().c_str()),
+                oss.str().size());
+        EXPECT_EQ(true, ret);
+    }
+}
+

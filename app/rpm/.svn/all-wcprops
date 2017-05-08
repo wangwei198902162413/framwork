@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/tb-common-utils/!svn/ver/22/trunk/rpm
+END
+scm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tb-common-utils/!svn/ver/22/trunk/rpm/scm.xml
+END
+t-csrd-tbnet-devel-build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tb-common-utils/!svn/ver/22/trunk/rpm/t-csrd-tbnet-devel-build.sh
+END
+t-csrd-tbnet-devel-VER.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tb-common-utils/!svn/ver/22/trunk/rpm/t-csrd-tbnet-devel-VER.txt
+END
+t-csrd-tbnet-devel.spec
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tb-common-utils/!svn/ver/22/trunk/rpm/t-csrd-tbnet-devel.spec
+END
