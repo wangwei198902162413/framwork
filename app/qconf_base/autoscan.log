@@ -1,0 +1,48 @@
+autoscan: warning: missing AC_CHECK_FUNCS([localtime_r]) wanted by: 
+	src/qconf_log.cc:78
+autoscan: warning: missing AC_CHECK_FUNCS([strrchr]) wanted by: 
+	src/qconf_log.cc:72
+autoscan: warning: missing AC_CHECK_HEADERS([sys/file.h]) wanted by: 
+	src/qconf_shm.cc:10
+autoscan: warning: missing AC_PROG_RANLIB wanted by: 
+	ltmain.sh:1601
+autoscan: warning: missing AC_TYPE_INT64_T wanted by: 
+	src/qhasharr.c:414
+	src/qhasharr.c:508
+	src/qhasharr.c:510
+	src/qlibc.h:152
+	src/qlibc.h:156
+autoscan: warning: missing AC_TYPE_MODE_T wanted by: 
+	src/qconf_shm.cc:86
+	src/qconf_shm.cc:125
+	src/qconf_shm.h:34
+	src/qconf_shm.h:35
+autoscan: warning: missing AC_TYPE_OFF_T wanted by: 
+	src/md5.h:47
+	src/md5.h:47
+autoscan: warning: missing AC_TYPE_SSIZE_T wanted by: 
+	src/qconf_msg.cc:77
+autoscan: warning: missing AC_TYPE_UINT16_T wanted by: 
+	src/qlibc.h:172
+autoscan: warning: missing AC_TYPE_UINT32_T wanted by: 
+	src/qhash.c:110
+	src/qhash.c:114
+	src/qhash.c:115
+	src/qhash.c:118
+	src/qhash.c:118
+	src/qhash.c:122
+	src/qhash.c:125
+	src/qlibc.h:109
+	src/qlibc.h:123
+	src/qlibc.h:191
+	src/qlibc.h:216
+autoscan: warning: missing AC_TYPE_UINT8_T wanted by: 
+	src/qhasharr.c:861
+	src/qconf_format.h:41
+	src/qhash.c:119
+	src/qhash.c:119
+	src/qhash.c:120
+	src/qhash.c:120
+	src/qhash.c:120
+	src/qlibc.h:78
+	src/qlibc.h:193

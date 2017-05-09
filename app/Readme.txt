@@ -1,4 +1,10 @@
-//直接build 既可以安装tbsys tbnet  安装到了.lib下  export TBLIB_ROOT= lib 目录 make tair
+1.安装tbnet tbsys qconf_base 直接build.sh 
+2.安装tair 需要先export TBLIB_ROOT=(安装tbsys 库的lib的绝对路径) cd tair 目录下 sh cplib.sh 及可以安装
+
+
+
+
+/*直接build 既可以安装tbsys tbnet  安装到了.lib下  export TBLIB_ROOT= lib 目录 make tair
 
 
 . 设置环境变量 TBLIB_ROOT
@@ -18,4 +24,4 @@ export_TBLIB_ROOT="/app/hbhome/OFCS_HOME/billing/app_dupchecker/tb-common-utils/
 　　CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/tair/tair/tb-common-utils/tbsys/src:/home/tair/tair/tb-common-utils/tbnet/src
 
 :/app/hbhome/OFCS_HOME/billing/app_dupchecker/tb-common-utils/tbsys/src:/app/hbhome/OFCS_HOME/billing/app_dupchecker/tb-common-utils/tbnet/src
-　　export CPLUS_INCLUDE_PATH
+　　export CPLUS_INCLUDE_PATH*/

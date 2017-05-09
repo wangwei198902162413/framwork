@@ -3,7 +3,7 @@ conf_server_table_manager.o: conf_server_table_manager.cpp \
  /usr/include/stdint.h /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h /usr/include/bits/wchar.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tbnet.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tbnet.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/types.h \
  /usr/include/bits/typesizes.h \
@@ -126,21 +126,21 @@ conf_server_table_manager.o: conf_server_table_manager.cpp \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/algorithmfwd.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/stl_tempbuf.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/backward/hash_fun.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbsys.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbsys.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cassert \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/iostream \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/sstream \
  /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/sstream.tcc \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/atomic.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/config.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/stringutil.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/atomic.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/config.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/stringutil.h \
  /usr/include/libio.h /usr/include/_G_config.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblog.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblog.h \
  /usr/include/strings.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
  /usr/include/fcntl.h /usr/include/bits/fcntl.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/fileutil.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbnetutil.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/fileutil.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbnetutil.h \
  /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
  /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
  /usr/include/linux/ioctl.h /usr/include/asm/ioctl.h \
@@ -148,55 +148,55 @@ conf_server_table_manager.o: conf_server_table_manager.cpp \
  /usr/include/sys/ttydefaults.h /usr/include/net/if.h \
  /usr/include/inttypes.h /usr/include/linux/unistd.h \
  /usr/include/asm/unistd.h /usr/include/asm/unistd_64.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbtimeutil.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/process.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblog.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/WarningBuffer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbrwlock.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblockguard.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/runnable.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/iqueuehandler.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/defaultrunnable.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/thread.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/threadmutex.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/threadcond.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/queuethread.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/filequeue.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/filequeuethread.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/profiler.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbsys.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/bytebuffer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/stats.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packet.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/controlpacket.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipacketfactory.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/databuffer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipackethandler.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipacketstreamer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/iserveradapter.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/defaultpacketstreamer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packetqueue.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/socket.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/serversocket.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/socketevent.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/epollsocketevent.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/channel.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/channelpool.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/connection.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpconnection.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpconnection.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/iocomponent.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpacceptor.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpcomponent.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpacceptor.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpcomponent.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/transport.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbtimeutil.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/process.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblog.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/WarningBuffer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbrwlock.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblockguard.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/runnable.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/iqueuehandler.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/defaultrunnable.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/thread.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/threadmutex.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/threadcond.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/queuethread.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/filequeue.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/filequeuethread.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/profiler.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbsys.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/bytebuffer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/stats.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packet.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/controlpacket.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipacketfactory.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/databuffer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipackethandler.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipacketstreamer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/iserveradapter.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/defaultpacketstreamer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packetqueue.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/socket.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/serversocket.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/socketevent.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/epollsocketevent.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/channel.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/channelpool.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/connection.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpconnection.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpconnection.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/iocomponent.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpacceptor.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpcomponent.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpacceptor.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpcomponent.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/transport.h \
  /usr/include/sys/ptrace.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httprequestpacket.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httpresponsepacket.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httppacketstreamer.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packetqueuethread.h \
- /app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/connectionmanager.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httprequestpacket.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httpresponsepacket.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httppacketstreamer.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packetqueuethread.h \
+ /app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/connectionmanager.h \
  ../../src/common/util.hpp /usr/include/dirent.h \
  /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
@@ -227,7 +227,7 @@ conf_server_table_manager.hpp:
 
 /usr/include/bits/wchar.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tbnet.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tbnet.h:
 
 /usr/include/unistd.h:
 
@@ -541,7 +541,7 @@ conf_server_table_manager.hpp:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/backward/hash_fun.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbsys.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbsys.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/cassert:
 
@@ -551,11 +551,11 @@ conf_server_table_manager.hpp:
 
 /usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../include/c++/4.4.7/bits/sstream.tcc:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/atomic.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/atomic.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/config.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/config.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/stringutil.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/stringutil.h:
 
 /usr/include/libio.h:
 
@@ -565,7 +565,7 @@ conf_server_table_manager.hpp:
 
 /usr/include/bits/sys_errlist.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblog.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblog.h:
 
 /usr/include/strings.h:
 
@@ -577,9 +577,9 @@ conf_server_table_manager.hpp:
 
 /usr/include/bits/fcntl.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/fileutil.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/fileutil.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbnetutil.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbnetutil.h:
 
 /usr/include/sys/ioctl.h:
 
@@ -609,103 +609,103 @@ conf_server_table_manager.hpp:
 
 /usr/include/asm/unistd_64.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbtimeutil.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbtimeutil.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/process.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/process.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblog.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblog.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/WarningBuffer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/WarningBuffer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbrwlock.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbrwlock.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tblockguard.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tblockguard.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/runnable.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/runnable.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/iqueuehandler.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/iqueuehandler.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/defaultrunnable.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/defaultrunnable.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/thread.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/thread.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/threadmutex.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/threadmutex.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/threadcond.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/threadcond.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/queuethread.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/queuethread.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/filequeue.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/filequeue.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/filequeuethread.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/filequeuethread.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/profiler.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/profiler.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/tbsys.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/tbsys.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbsys/bytebuffer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbsys/bytebuffer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/stats.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/stats.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packet.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packet.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/controlpacket.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/controlpacket.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipacketfactory.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipacketfactory.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/databuffer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/databuffer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipackethandler.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipackethandler.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/ipacketstreamer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/ipacketstreamer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/iserveradapter.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/iserveradapter.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/defaultpacketstreamer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/defaultpacketstreamer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packetqueue.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packetqueue.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/socket.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/socket.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/serversocket.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/serversocket.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/socketevent.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/socketevent.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/epollsocketevent.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/epollsocketevent.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/channel.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/channel.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/channelpool.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/channelpool.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/connection.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/connection.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpconnection.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpconnection.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpconnection.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpconnection.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/iocomponent.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/iocomponent.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpacceptor.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpacceptor.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/tcpcomponent.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/tcpcomponent.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpacceptor.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpacceptor.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/udpcomponent.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/udpcomponent.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/transport.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/transport.h:
 
 /usr/include/sys/ptrace.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httprequestpacket.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httprequestpacket.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httpresponsepacket.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httpresponsepacket.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/httppacketstreamer.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/httppacketstreamer.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/packetqueuethread.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/packetqueuethread.h:
 
-/app/hbhome/OFCS_HOME/billing/study_bill/thirdparty/tb-common-utils/lib/include/tbnet/connectionmanager.h:
+/app/hbhome/OFCS_HOME/billing/study_bill/app/lib/include/tbnet/connectionmanager.h:
 
 ../../src/common/util.hpp:
 
