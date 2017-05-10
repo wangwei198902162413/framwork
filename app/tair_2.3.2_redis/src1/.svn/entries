@@ -1,83 +1,0 @@
-10
-
-dir
-3085
-http://code.taobao.org/svn/tair/branches/tair_2.3.2_redis/src
-http://code.taobao.org/svn/tair
-
-
-
-2014-08-08T09:17:22.804649Z
-2868
-mingmin.xmm@alibaba-inc.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ed5bfd34-b61d-4ad5-b956-f82ce90ca771
-
-dataserver
-dir
-
-storage
-dir
-
-common
-dir
-
-Makefile.am
-file
-
-
-
-
-2017-04-12T01:50:42.281250Z
-1aa2298d4b39fa2ee88a2364bb7f32d9
-2012-03-22T16:39:54.445856Z
-662
-choutian.xmm@taobao.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-70
-
-packets
-dir
-
-configserver
-dir
-
-client
-dir
-
-plugin
-dir
-

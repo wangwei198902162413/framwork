@@ -1,6 +1,6 @@
 1.安装tbnet tbsys qconf_base 直接build.sh 
-2.安装tair 需要先export TBLIB_ROOT=(安装tbsys 库的lib的绝对路径) cd tair 目录下 sh cplib.sh 及可以安装
-
+2.安装tair 需要先export TBLIB_ROOT=(安装tbsys 库的lib的绝对路径) cd tair 目录下 sh cplib.sh 及可以安装 或者 将头文件/include/tbsys /include/tbnet 目录下，lib/libtbnet.a /lib/libtbsys.a
+(建议使用第二种方式)
 
 
 
